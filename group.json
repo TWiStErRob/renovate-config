@@ -6,7 +6,8 @@
 			"github>TWiStErRob/renovate-config:group/ktor",
 			"github>TWiStErRob/renovate-config:group/agp",
 			"github>TWiStErRob/renovate-config:group/androidx",
-			"github>TWiStErRob/renovate-config:group/androidx-test"
+			"github>TWiStErRob/renovate-config:group/androidx-test",
+			"github>TWiStErRob/renovate-config:group/mockito"
 		]
 	},
 	"kotlin": {
@@ -65,6 +66,18 @@
 					"androidx.test.espresso:"
 				],
 				"groupName": "AndroidX Test Monorepo"
+			}
+		]
+	},
+	"mockito": {
+		"extends": "monorepo:mockito",
+		"packageRules": [
+			{
+				"description": "Add nhaarman dependency to mockito group.",
+				"matchPackageNames": [
+					"com.nhaarman.mockitokotlin2:mockito-kotlin",
+					"com.nhaarman:mockito-kotlin"
+				]
 			}
 		]
 	}
