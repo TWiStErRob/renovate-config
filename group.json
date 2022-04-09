@@ -15,6 +15,7 @@
 				"description": "Group together all dependencies from standard Kotlin and KotlinX, including coroutines.",
 				"matchPackagePrefixes": [
 					"org.jetbrains.kotlin:",
+					"org.jetbrains.kotlin.android",
 					"org.jetbrains.kotlinx:"
 				],
 				"groupName": "Kotlin"
