@@ -4,7 +4,9 @@
 		"extends": [
 			"github>TWiStErRob/renovate-config:group/kotlin",
 			"github>TWiStErRob/renovate-config:group/ktor",
-			"github>TWiStErRob/renovate-config:group/gradle"
+			"github>TWiStErRob/renovate-config:group/agp",
+			"github>TWiStErRob/renovate-config:group/androidx",
+			"github>TWiStErRob/renovate-config:group/androidx-test"
 		]
 	},
 	"kotlin": {
@@ -30,7 +32,7 @@
 			}
 		]
 	},
-	"gradle": {
+	"agp": {
 		"packageRules": [
 			{
 				"description": "Group together all dependencies and plugin aliases from AGP.",
@@ -39,6 +41,29 @@
 					"com.android."
 				],
 				"groupName": "Android Gradle Plugin"
+			}
+		]
+	},
+	"androidx": {
+		"packageRules": [
+			{
+				"description": "Group together all dependencies from AndroidX.",
+				"matchPackagePrefixes": [
+					"androidx."
+				],
+				"groupName": "AndroidX Monorepo"
+			}
+		]
+	},
+	"androidx-test": {
+		"packageRules": [
+			{
+				"description": "Group together all dependencies from AndroidX Test (Espresso).",
+				"matchPackagePrefixes": [
+					"androidx.test:",
+					"androidx.test.espresso:"
+				],
+				"groupName": "AndroidX Test Monorepo"
 			}
 		]
 	}
