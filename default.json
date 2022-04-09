@@ -5,6 +5,7 @@
 		"github>TWiStErRob/renovate-config:group/all",
 		":disableDependencyDashboard"
 	],
+	"separateMultipleMajor": true,
 	"ignorePaths": [
 	],
 	"packageRules": [
