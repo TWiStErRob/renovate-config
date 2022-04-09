@@ -1,0 +1,25 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"all": {
+		"extends": [
+			"github>TWiStErRob/renovate-config:major-as-minor/agp",
+			"github>TWiStErRob/renovate-config:major-as-minor/kotlin"
+		]
+	},
+	"agp": {
+		"extends": [
+			"github>TWiStErRob/renovate-config:group/agp"
+		],
+		"separateMajorMinor": true,
+		"separateMultipleMajor": true,
+		"separateMinorPatch": true
+	},
+	"kotlin": {
+		"extends": [
+			"github>TWiStErRob/renovate-config:group/kotlin"
+		],
+		"separateMajorMinor": true,
+		"separateMultipleMajor": true,
+		"separateMinorPatch": true
+	}
+}

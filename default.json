@@ -3,27 +3,12 @@
 	"extends": [
 		"config:base",
 		"github>TWiStErRob/renovate-config:group/all",
+		"github>TWiStErRob/renovate-config:major-as-minor/all",
 		":disableDependencyDashboard"
 	],
 	"separateMultipleMajor": true,
 	"ignorePaths": [
 	],
 	"packageRules": [
-		{
-			"matchPackageNames": [
-				"org.gradle.kotlin.kotlin-dsl",
-				"net.twisterrob.root",
-				"net.twisterrob.quality"
-			],
-			"enabled": false
-		},
-		{
-			"matchPackageNames": [
-				"com.andorid.application",
-				"com.andorid.library",
-				"com.android.tools.build:gradle"
-			],
-			"separateMinorPatch": true
-		}
 	]
 }
