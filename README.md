@@ -9,12 +9,17 @@ Each file should have this line as the first one to trigger automatic setup when
 "$schema": "https://docs.renovatebot.com/renovate-schema.json",
 ```
 
+## Testing
+Hack around in [renovate-config-test](https://github.com/TWiStErRob/renovate-config-test).
+
+ * [Renovate GitHub app installation](https://github.com/settings/installations/24636554)
+
 # Documentation
- * How to reference files: https://docs.renovatebot.com/config-presets/#github
- * Default presets: https://docs.renovatebot.com/presets-config/
- * Source of default presets: https://github.com/renovatebot/renovate/blob/main/lib/config/presets/internal/
+ * [How to reference files](https://docs.renovatebot.com/config-presets/#github)
+ * [Doc of default presets](https://docs.renovatebot.com/presets-config/)
+ * [Source of default presets](https://github.com/renovatebot/renovate/blob/main/lib/config/presets/internal/)
  * renovatebots' own configuration
-   * Base config: https://github.com/renovatebot/.github/blob/main/default.json
-   * Onboarding config: https://github.com/renovatebot/.github/blob/main/renovate-config.json
-   * Main repo: https://github.com/renovatebot/renovate/blob/main/renovate.json
-   * Docs: https://github.com/renovatebot/renovatebot.github.io/blob/main/renovate.json
+   * Base config: [renovatebot/.github/default.json](https://github.com/renovatebot/.github/blob/main/default.json)
+   * Onboarding config: [renovatebot/.github/renovate-config.json](https://github.com/renovatebot/.github/blob/main/renovate-config.json)
+   * Main repo: [renovatebot/renovate/renovate.json](https://github.com/renovatebot/renovate/blob/main/renovate.json)
+   * Docs: [renovatebot/renovate.github.io/renovate.json](https://github.com/renovatebot/renovatebot.github.io/blob/main/renovate.json)
