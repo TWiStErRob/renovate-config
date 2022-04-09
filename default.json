@@ -2,10 +2,8 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [
 		"config:base",
-		"group:monorepos",
-		"group:recommended",
-		":disableDependencyDashboard",
-		"github>TWiStErRob/renovate-config:group/all"
+		"github>TWiStErRob/renovate-config:group/all",
+		":disableDependencyDashboard"
 	],
 	"ignorePaths": [
 	],
