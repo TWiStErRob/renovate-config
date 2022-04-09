@@ -15,64 +15,67 @@
 	"kotlin": {
 		"packageRules": [
 			{
+				"groupName": "Kotlin",
 				"description": "Group together all dependencies from standard Kotlin and KotlinX, including coroutines.",
 				"matchPackagePrefixes": [
 					"org.jetbrains.kotlin:",
 					"org.jetbrains.kotlin.android",
 					"org.jetbrains.kotlinx:"
 				],
-				"groupName": "Kotlin"
+				"separateMinorPatch": true
 			}
 		]
 	},
 	"ktor": {
 		"packageRules": [
 			{
+				"groupName": "ktor.io",
 				"description": "Group together all dependencies of ktor.",
 				"matchPackagePrefixes": [
 					"io.ktor:"
-				],
-				"groupName": "ktor.io"
+				]
 			}
 		]
 	},
 	"agp": {
 		"packageRules": [
 			{
+				"groupName": "Android Gradle Plugin",
 				"description": "Group together all dependencies and plugin aliases from AGP.",
 				"matchPackagePrefixes": [
 					"com.android.tools.build:",
 					"com.android."
-				],
-				"groupName": "Android Gradle Plugin"
+				]
 			}
 		]
 	},
 	"androidx": {
 		"packageRules": [
 			{
+				"groupName": "AndroidX Monorepo",
 				"description": "Group together all dependencies from AndroidX.",
 				"matchPackagePrefixes": [
 					"androidx."
-				],
-				"groupName": "AndroidX Monorepo"
+				]
 			}
 		]
 	},
 	"androidx-test": {
 		"packageRules": [
 			{
+				"groupName": "AndroidX Test Monorepo",
 				"description": "Group together all dependencies from AndroidX Test (Espresso).",
 				"matchPackagePrefixes": [
 					"androidx.test:",
 					"androidx.test.espresso:"
-				],
-				"groupName": "AndroidX Test Monorepo"
+				]
 			}
 		]
 	},
 	"mockito": {
-		"extends": "monorepo:mockito",
+		"extends": [
+			"monorepo:mockito"
+		],
 		"packageRules": [
 			{
 				"description": "Add nhaarman dependency to mockito group.",

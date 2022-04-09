@@ -15,6 +15,14 @@
 				"net.twisterrob.quality"
 			],
 			"enabled": false
+		},
+		{
+			"matchPackageNames": [
+				"com.andorid.application",
+				"com.andorid.library",
+				"com.android.tools.build:gradle"
+			],
+			"separateMinorPatch": true
 		}
 	]
 }
