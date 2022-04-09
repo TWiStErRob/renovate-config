@@ -1,0 +1,22 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"config:base",
+		"group:monorepos",
+		"group:recommended",
+		":disableDependencyDashboard",
+		"github>TWiStErRob/renovate-config:group/all"
+	],
+	"ignorePaths": [
+	],
+	"packageRules": [
+		{
+			"matchPackageNames": [
+				"org.gradle.kotlin.kotlin-dsl",
+				"net.twisterrob.root",
+				"net.twisterrob.quality"
+			],
+			"enabled": false
+		}
+	]
+}

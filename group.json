@@ -1,0 +1,45 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"all": {
+		"extends": [
+			"github>TWiStErRob/renovate-config:group/kotlin",
+			"github>TWiStErRob/renovate-config:group/ktor",
+			"github>TWiStErRob/renovate-config:group/gradle"
+		]
+	},
+	"kotlin": {
+		"packageRules": [
+			{
+				"description": "Group together all dependencies from standard Kotlin and KotlinX, including coroutines.",
+				"matchPackagePrefixes": [
+					"org.jetbrains.kotlin:",
+					"org.jetbrains.kotlinx:"
+				],
+				"groupName": "Kotlin"
+			}
+		]
+	},
+	"ktor": {
+		"packageRules": [
+			{
+				"description": "Group together all dependencies of ktor.",
+				"matchPackagePrefixes": [
+					"io.ktor:"
+				],
+				"groupName": "ktor.io"
+			}
+		]
+	},
+	"gradle": {
+		"packageRules": [
+			{
+				"description": "Group together all dependencies and plugin aliases from AGP.",
+				"matchPackagePrefixes": [
+					"com.android.tools.build:",
+					"com.android."
+				],
+				"groupName": "Android Gradle Plugin"
+			}
+		]
+	}
+}
