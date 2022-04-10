@@ -15,9 +15,12 @@
 		"separateMinorPatch": true
 	},
 	"kotlin": {
+		"groupName": "Kotlin",
+		"description": "See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
 		"extends": [
 			"github>TWiStErRob/renovate-config:group/kotlin"
 		],
+		"versioning": "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
 		"separateMajorMinor": true,
 		"separateMultipleMajor": true,
 		"separateMinorPatch": true
