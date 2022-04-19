@@ -6,7 +6,9 @@
 		"github>TWiStErRob/renovate-config:major-as-minor/all",
 		":disableDependencyDashboard"
 	],
+	"separateMajorMinor": true,
 	"separateMultipleMajor": true,
+	"separateMinorPatch": true,
 	"ignorePaths": [
 	],
 	"packageRules": [
