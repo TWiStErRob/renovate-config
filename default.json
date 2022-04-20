@@ -2,9 +2,10 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [
 		"config:base",
+		":disableRateLimiting",
+		":disableDependencyDashboard",
 		"github>TWiStErRob/renovate-config:group/all",
-		"github>TWiStErRob/renovate-config:major-as-minor/all",
-		":disableDependencyDashboard"
+		"github>TWiStErRob/renovate-config:major-as-minor/all"
 	],
 	"separateMajorMinor": true,
 	"separateMultipleMajor": true,
