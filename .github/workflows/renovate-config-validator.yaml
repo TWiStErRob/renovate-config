@@ -5,7 +5,7 @@ on:
 
 jobs:
   shared-config:
-    name: 🔍 Validate Shared Renovate Config
+    name: 🔍 Shared Config
     runs-on: ubuntu-latest
     steps:
 
@@ -18,7 +18,7 @@ jobs:
           pattern: 'default.json'
 
   own-config:
-    name: 🔍 Validate Renovate Config
+    name: 🔍 Own Config
     runs-on: ubuntu-latest
     steps:
 
