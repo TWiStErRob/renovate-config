@@ -1,0 +1,31 @@
+name: Validate Renovate Config
+
+on:
+  push
+
+jobs:
+  shared-config:
+    name: 🔍 Validate Shared Renovate Config
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout ${{ github.ref }} branch in ${{ github.repository }} repository.
+        uses: actions/checkout@v2
+
+      - name: Run renovate-config-validator on shared config.
+        uses: rinchsan/renovate-config-validator@v0.0.11
+        with:
+          pattern: 'default.json'
+
+  own-config:
+    name: 🔍 Validate Renovate Config
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout ${{ github.ref }} branch in ${{ github.repository }} repository.
+        uses: actions/checkout@v2
+
+      - name: Run renovate-config-validator on repository's own config.
+        uses: rinchsan/renovate-config-validator@v0.0.11
+        with:
+          pattern: '.github/renovate.json'
