@@ -11,6 +11,7 @@
 	"separateMultipleMajor": true,
 	"separateMinorPatch": true,
 	"ignorePaths": [
+		"do-not-ignore-anything"
 	],
 	"packageRules": [
 	]

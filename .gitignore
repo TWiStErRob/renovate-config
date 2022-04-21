@@ -3,3 +3,7 @@
 
 # Reference to renovate-config-test repo.
 /test/
+
+# Renovate self-hosted
+/node_modules/
+/renovate.log

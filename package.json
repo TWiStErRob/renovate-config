@@ -1,0 +1,11 @@
+{
+	"scripts": {
+		"renovate": "renovate"
+	},
+	"devDependencies": {
+		"renovate": "^32.27.0"
+	},
+	"jshintConfig": {
+		"esversion": 9
+	}
+}

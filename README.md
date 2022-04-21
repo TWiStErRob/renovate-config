@@ -15,15 +15,25 @@ Note: this repository is called `renovate-config` so it'll be [picked up automat
 # Development
 IntelliJ IDEA has json-schema validation and auto-complete support, so it the recommended editor.
 
-Each file should have this line as the first one to trigger automatic setup when opening files:
+Each file should have this as the first property to trigger automatic setup when opening files:
 ```json
-"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+{
+   "$schema": "https://docs.renovatebot.com/renovate-schema.json"
+}
 ```
 ## Local Testing
 ```shell
 npm install
-npm run renovate
+set LOG_LEVEL=debug
+# Either:
+npm run renovate -- TWiStErRob/renovate-config-test > renovate.log
+npm run renovate -- --token ghp_... TWiStErRob/renovate-config-test > renovate.log
 ```
+Where `ghp_...` is a Personal Access Token generated at https://github.com/settings/tokens.
+ * add `user:email` scope to reduce warnings
+ * add `repo` scope for accessing private repositories
+ * *Warning*: `npm run` will echo the command line so renovate.log will contain the key.  
+   To prevent this, use `set RENOVATE_TOKEN=ghp_...` instead.
 
 ## Integration Testing
 Hack around in [renovate-config-test](https://github.com/TWiStErRob/renovate-config-test).
