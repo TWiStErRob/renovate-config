@@ -7,7 +7,7 @@
 		"github>TWiStErRob/renovate-config:group/all",
 		"github>TWiStErRob/renovate-config:major-as-minor/all"
 	],
-	"commitMessageExtra": "from {{{currentValue}}} to {{{newValue}}}{{#if isMajor}} (major v{{{newMajor}}}){{else}} ({{#if isSingleVersion}}v{{{newVersion}}}){{else}}{{/if}}{{/if}}",
+	"commitMessageExtra": "from {{{currentValue}}} to {{{newValue}}}{{#if isMajor}} (major v{{{newMajor}}}){{else}}{{/if}}",
 	"separateMajorMinor": true,
 	"separateMultipleMajor": true,
 	"separateMinorPatch": true,
