@@ -1,13 +1,13 @@
-# renovate-configs
+# renovate-config
 Configuration files for renovatebot installed in [repositories](https://github.com/TWiStErRob?tab=repositories).
 
 ## Naming
-Note: this repository is called `renovate-configs` instead of `renovate-config` to avoid being [picked up automatically by Renovate](https://docs.renovatebot.com/config-presets/#organization-level-presets). I explicitly want to use the `TWiStErRob/.github/renovate.json` file rather than this repository automatically.
+Note: this repository is called `renovate-config` so it'll be [picked up automatically by Renovate](https://docs.renovatebot.com/config-presets/#organization-level-presets).
 
 # Installation
  1. Add repository to [Renovate GitHub app installation](https://github.com/settings/installations/24636554).
  2. Wait for "Configure Renovate" onboarding PR.
- 3. It should automatically pick up [local>TWiStErRob/renovate-configs](https://github.com/TWiStErRob/.github/blob/main/renovate.json)
+ 3. It should automatically pick up [local>TWiStErRob/renovate-config](default.json)
  4. Move `/renovate.json` to `/.github/renovate.json`.
  5. Commit and push to `renovate/configure` branch.
  6. Review, configure as necessary and merge PR.
@@ -16,11 +16,16 @@ Note: this repository is called `renovate-configs` instead of `renovate-config` 
 IntelliJ IDEA has json-schema validation and auto-complete support, so it the recommended editor.
 
 Each file should have this line as the first one to trigger automatic setup when opening files:
-```
+```json
 "$schema": "https://docs.renovatebot.com/renovate-schema.json",
 ```
+## Local Testing
+```shell
+npm install
+npm run renovate
+```
 
-## Testing
+## Integration Testing
 Hack around in [renovate-config-test](https://github.com/TWiStErRob/renovate-config-test).
 
 # Documentation
