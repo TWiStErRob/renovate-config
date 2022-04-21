@@ -42,9 +42,10 @@
 			{
 				"groupName": "Android Gradle Plugin",
 				"description": "Group together all dependencies and plugin aliases from AGP.",
-				"matchPackagePrefixes": [
-					"com.android.tools.build:",
-					"com.android."
+				"matchPackageNames": [
+					"com.android.tools.build:gradle",
+					"com.android.application",
+					"com.android.library"
 				]
 			}
 		]
