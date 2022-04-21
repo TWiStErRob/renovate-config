@@ -3,7 +3,7 @@
 		"renovate": "renovate"
 	},
 	"devDependencies": {
-		"renovate": "^32.27.0"
+		"renovate": "32.0.0"
 	},
 	"jshintConfig": {
 		"esversion": 9
