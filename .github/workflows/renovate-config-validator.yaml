@@ -23,7 +23,7 @@ jobs:
     steps:
 
       - name: Checkout ${{ github.ref }} branch in ${{ github.repository }} repository.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Run renovate-config-validator on repository's own config.
         uses: rinchsan/renovate-config-validator@v0.0.11
