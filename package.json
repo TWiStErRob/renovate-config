@@ -1,4 +1,5 @@
 {
+	"name": "twisterrob-renovate-config",
 	"scripts": {
 		"renovate": "renovate"
 	},
