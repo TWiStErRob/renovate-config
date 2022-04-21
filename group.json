@@ -74,9 +74,7 @@
 		]
 	},
 	"mockito": {
-		"extends": [
-			"monorepo:mockito"
-		],
+		"groupName": "mockito monorepo",
 		"packageRules": [
 			{
 				"description": "Add nhaarman dependency to mockito group.",
