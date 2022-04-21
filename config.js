@@ -1,5 +1,5 @@
-const fs = require('fs');
-const file = JSON.parse(fs.readFileSync("default.json", "utf8"));
+// const fs = require('fs');
+// const file = JSON.parse(fs.readFileSync("default.json", "utf8"));
 module.exports = {
 	"dryRun": "full",
 	"platform": "github",
@@ -17,5 +17,5 @@ module.exports = {
 	// >       "sourceUrl": "https://cs.android.com/androidx/platform/frameworks/support",
 	// >       "hostType": null
 	"fetchReleaseNotes": false,
-	...file
+//	...file
 };
