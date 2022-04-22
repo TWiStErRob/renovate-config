@@ -34,10 +34,10 @@
 	"ktor": {
 		"packageRules": [
 			{
-				"groupName": "ktor.io",
+				"groupName": "ktor.io monorepo",
 				"description": "Group together all dependencies of ktor.",
-				"matchPackagePrefixes": [
-					"io.ktor:"
+				"matchSourceUrlPrefixes": [
+					"https://github.com/ktorio/ktor"
 				]
 			}
 		]
@@ -45,7 +45,7 @@
 	"detekt": {
 		"packageRules": [
 			{
-				"groupName": "Detekt",
+				"groupName": "Detekt monorepo",
 				"description": "Group together all dependencies of Detekt.",
 				"matchSourceUrlPrefixes": [
 					"https://github.com/detekt/detekt"
@@ -96,7 +96,7 @@
 		"groupName": "mockito monorepo",
 		"packageRules": [
 			{
-				"description": "Add nhaarman dependency to mockito group.",
+				"description": "Add nhaarman dependency to builtin 'mockito monorepo' group.",
 				"matchPackageNames": [
 					"com.nhaarman.mockitokotlin2:mockito-kotlin",
 					"com.nhaarman:mockito-kotlin"
