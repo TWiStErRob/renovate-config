@@ -93,9 +93,9 @@
 		]
 	},
 	"mockito": {
-		"groupName": "mockito monorepo",
 		"packageRules": [
 			{
+				"groupName": "mockito monorepo",
 				"description": "Add nhaarman dependency to builtin 'mockito monorepo' group.",
 				"matchPackageNames": [
 					"com.nhaarman.mockitokotlin2:mockito-kotlin",
