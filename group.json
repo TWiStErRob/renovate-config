@@ -6,6 +6,7 @@
 			"group:recommended",
 			"github>TWiStErRob/renovate-config:group/kotlin",
 			"github>TWiStErRob/renovate-config:group/ktor",
+			"github>TWiStErRob/renovate-config:group/detekt",
 			"github>TWiStErRob/renovate-config:group/agp",
 			"github>TWiStErRob/renovate-config:group/androidx",
 			"github>TWiStErRob/renovate-config:group/androidx-test",
@@ -37,6 +38,17 @@
 				"description": "Group together all dependencies of ktor.",
 				"matchPackagePrefixes": [
 					"io.ktor:"
+				]
+			}
+		]
+	},
+	"detekt": {
+		"packageRules": [
+			{
+				"groupName": "Detekt",
+				"description": "Group together all dependencies of Detekt.",
+				"matchSourceUrlPrefixes": [
+					"https://github.com/detekt/detekt"
 				]
 			}
 		]
