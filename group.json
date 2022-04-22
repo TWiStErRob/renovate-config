@@ -30,7 +30,7 @@
 			{
 				"groupName": "Kotlin",
 				"matchPackagePatterns": [
-					"^org\\.jetbrains\\.kotlin\\.(.+):org\\.jetbrains\\.kotlin\\.(\\1)\\.gradle\\.plugin"
+					"^org\\.jetbrains\\.kotlin\\.(.+):org\\.jetbrains\\.kotlin\\.(\\$1)\\.gradle\\.plugin"
 				],
 				"versioning": "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
 				"separateMajorMinor": true,
