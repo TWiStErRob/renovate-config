@@ -50,6 +50,14 @@
 				"matchSourceUrlPrefixes": [
 					"https://github.com/detekt/detekt"
 				]
+			},
+			{
+				"groupName": "Detekt monorepo",
+				"description": "Group together all dependencies of Detekt.",
+				"matchPackageNames": [
+					"io.gitlab.arturbosch.detekt",
+					"io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin"
+				]
 			}
 		]
 	},
