@@ -16,13 +16,17 @@
 		"packageRules": [
 			{
 				"groupName": "Kotlin",
-				"description": "Group together all dependencies from standard Kotlin and KotlinX, including coroutines.",
+				"description": "Group together all dependencies from standard Kotlin and KotlinX, including coroutines. See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
 				"matchPackagePrefixes": [
 					"org.jetbrains.kotlin:",
 					"org.jetbrains.kotlin.android",
-					"org.jetbrains.kotlinx:",
+					"org.jetbrains.kotlinx:kotlinx-coroutines-",
 					"org.jetbrains.dokka:"
-				]
+				],
+				"versioning": "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
+				"separateMajorMinor": true,
+				"separateMultipleMajor": true,
+				"separateMinorPatch": true
 			}
 		]
 	},
@@ -46,7 +50,10 @@
 					"com.android.tools.build:gradle",
 					"com.android.application",
 					"com.android.library"
-				]
+				],
+				"separateMajorMinor": true,
+				"separateMultipleMajor": true,
+				"separateMinorPatch": true
 			}
 		]
 	},
