@@ -107,7 +107,10 @@
 					"com.android.tools:",
 					"com.android.tools.build:",
 					"com.android.tools.lint:",
-				]
+				],
+				"separateMajorMinor": true,
+				"separateMultipleMajor": true,
+				"separateMinorPatch": true
 			}
 		]
 	},
