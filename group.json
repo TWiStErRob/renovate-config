@@ -8,6 +8,7 @@
 			"github>TWiStErRob/renovate-config:group/ktor",
 			"github>TWiStErRob/renovate-config:group/detekt",
 			"github>TWiStErRob/renovate-config:group/agp",
+			"github>TWiStErRob/renovate-config:group/agp-lint",
 			"github>TWiStErRob/renovate-config:group/androidx",
 			"github>TWiStErRob/renovate-config:group/androidx-test",
 			"github>TWiStErRob/renovate-config:group/mockito"
@@ -88,11 +89,25 @@
 				"matchPackageNames": [
 					"com.android.tools.build:gradle",
 					"com.android.application",
-					"com.android.library"
+					"com.android.library",
+					
 				],
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
 				"separateMinorPatch": true
+			}
+		]
+	},
+	"agp-lint": {
+		"packageRules": [
+			{
+				"groupName": "Android Gradle Plugin",
+				"description": "Group together all related dependencies from AGP.",
+				"matchPackagePrefixes": [
+					"com.android.tools:",
+					"com.android.tools.build:",
+					"com.android.tools.lint:",
+				]
 			}
 		]
 	},
