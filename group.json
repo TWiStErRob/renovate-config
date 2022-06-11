@@ -98,9 +98,28 @@
 				"description": "Group together all dependencies and plugin aliases from AGP.",
 				"matchPackageNames": [
 					"com.android.tools.build:gradle",
+					"android",
 					"com.android.application",
+					"com.android.asset-pack",
+					"com.android.asset-pack-bundle",
+					"com.android.base",
+					"com.android.dynamic-feature",
+					"com.android.fused-library",
+					"com.android.internal.application",
+					"com.android.internal.asset-pack",
+					"com.android.internal.asset-pack-bundle",
+					"com.android.internal.dynamic-feature",
+					"com.android.internal.fused-library",
+					"com.android.internal.library",
+					"com.android.internal.reporting",
+					"com.android.internal.test",
+					"com.android.internal.version-check",
+					"android-library",
 					"com.android.library",
-					
+					"com.android.lint",
+					"android-reporting",
+					"com.android.reporting",
+					"com.android.test"
 				],
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
@@ -116,7 +135,7 @@
 				"matchPackagePrefixes": [
 					"com.android.tools:",
 					"com.android.tools.build:",
-					"com.android.tools.lint:",
+					"com.android.tools.lint:"
 				],
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
