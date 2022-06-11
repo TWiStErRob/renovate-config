@@ -20,29 +20,43 @@
 			{
 				"groupName": "Kotlin",
 				"matchSourceUrlPrefixes": [
-					"https://github.com/JetBrains/kotlin",
-					"https://github.com/Kotlin/kotlinx.coroutines"
+					"https://github.com/JetBrains/kotlin"
 				],
-				"versioning": "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
-				"separateMajorMinor": true,
-				"separateMultipleMajor": true,
-				"separateMinorPatch": true
-			},
-			{
-				"groupName": "Kotlin",
+				"matchPackagePatterns": [
+					"^org\\.jetbrains\\.kotlin:kotlin-.*$",
+					"^org\\.jetbrains\\.kotlin\\.(.+):org\\.jetbrains\\.kotlin\\.(\\$1)\\.gradle\\.plugin$"
+				],
 				"matchPackageNames": [
 					"org.jetbrains.kotlin:kotlin-gradle-plugin",
-					"org.jetbrains.kotlin.android"
-				],
-				"versioning": "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
-				"separateMajorMinor": true,
-				"separateMultipleMajor": true,
-				"separateMinorPatch": true
-			},
-			{
-				"groupName": "Kotlin",
-				"matchPackagePatterns": [
-					"^org\\.jetbrains\\.kotlin\\.(.+):org\\.jetbrains\\.kotlin\\.(\\$1)\\.gradle\\.plugin"
+					"org.jetbrains.kotlin.js",
+					"kotlin",
+					"org.jetbrains.kotlin.jvm",
+					"kotlin-kapt",
+					"org.jetbrains.kotlin.kapt",
+					"kotlin-android",
+					"org.jetbrains.kotlin.android",
+					"kotlin-android-extensions",
+					"org.jetbrains.kotlin.android.extensions",
+					"kotlin-multiplatform",
+					"org.jetbrains.kotlin.multiplatform",
+					"kotlin-native-cocoapods",
+					"org.jetbrains.kotlin.native.cocoapods",
+					"kotlin-native-performance",
+					"org.jetbrains.kotlin.native.performance",
+					"kotlin-platform-android",
+					"org.jetbrains.kotlin.platform.android",
+					"kotlin-platform-common",
+					"org.jetbrains.kotlin.platform.common",
+					"kotlin-platform-js",
+					"org.jetbrains.kotlin.platform.js",
+					"kotlin-platform-jvm",
+					"org.jetbrains.kotlin.platform.jvm",
+					"kotlin-parcelize",
+					"org.jetbrains.kotlin.plugin.parcelize",
+					"kotlin-scripting,",
+					"org.jetbrains.kotlin.plugin.scripting",
+					"kotlin2js",
+					"kotlin-dce-js"
 				],
 				"versioning": "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
 				"separateMajorMinor": true,
@@ -69,11 +83,7 @@
 				"description": "Group together all dependencies of Detekt.",
 				"matchSourceUrlPrefixes": [
 					"https://github.com/detekt/detekt"
-				]
-			},
-			{
-				"groupName": "Detekt monorepo",
-				"description": "Group together all dependencies of Detekt.",
+				],
 				"matchPackageNames": [
 					"io.gitlab.arturbosch.detekt",
 					"io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin"
