@@ -86,6 +86,7 @@
 				],
 				"matchPackageNames": [
 					"io.gitlab.arturbosch.detekt",
+					"io.gitlab.arturbosch.detekt:detekt-gradle-plugin",
 					"io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin"
 				]
 			}
