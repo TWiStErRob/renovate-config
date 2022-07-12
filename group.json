@@ -11,7 +11,8 @@
 			"github>TWiStErRob/renovate-config:group/agp-lint",
 			"github>TWiStErRob/renovate-config:group/androidx",
 			"github>TWiStErRob/renovate-config:group/androidx-test",
-			"github>TWiStErRob/renovate-config:group/mockito"
+			"github>TWiStErRob/renovate-config:group/mockito",
+			"github>TWiStErRob/renovate-config:group/neo4j"
 		]
 	},
 	"kotlin": {
@@ -176,6 +177,25 @@
 					"com.nhaarman.mockitokotlin2:mockito-kotlin",
 					"com.nhaarman:mockito-kotlin"
 				]
+			}
+		]
+	},
+	"neo4j": {
+		"description": "Group together all dependencies from Neo4J and OGM",
+		"packageRules": [
+			{
+				"groupName": "Neo4J monorepo",
+				"matchSourceUrlPrefixes": [
+					"https://github.com/neo4j"
+				],
+				"matchPackagePatterns": [
+					"^org\\.neo4j$",
+					"^org\\.neo4j:neo4j-ogm-.+$",
+					"^org\\.neo4j\\..+:neo4j-.+$"
+				],
+				"separateMajorMinor": true,
+				"separateMultipleMajor": true,
+				"separateMinorPatch": true
 			}
 		]
 	}
