@@ -189,7 +189,7 @@
 					"https://github.com/neo4j"
 				],
 				"matchPackagePatterns": [
-					"^org\\.neo4j$",
+					"^org\\.neo4j:neo4j$",
 					"^org\\.neo4j:neo4j-ogm-.+$",
 					"^org\\.neo4j\\..+:neo4j-.+$"
 				],
