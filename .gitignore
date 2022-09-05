@@ -6,4 +6,4 @@
 
 # Renovate self-hosted
 /node_modules/
-/renovate.log
+/renovate*.log
