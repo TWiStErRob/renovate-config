@@ -30,11 +30,11 @@ npm install
 # Make sure renovate can read the repositories.
 set RENOVATE_TOKEN=ghp_...
 # Edit config.js as necessary, mostly repositories and baseBranches.
+# Set up logging (see config.js for more info, why.)
+set LOG_LEVEL=debug
 # Execute renovate on any repository (public or private).
-npm run renovate
+npm run renovate > renovate.log
 ```
-
-Can `set LOG_LEVEL=warn` to reduce console output.
 
 <details><summary>ghp_...</summary>
 
