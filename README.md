@@ -29,7 +29,7 @@ This will pick up `config.js` and will do a dry-run.
 npm install
 # Make sure renovate can read the repositories.
 set RENOVATE_TOKEN=ghp_...
-# Edit config.js as necessary, mostly repositories and baseBranches.
+# Edit config.js as necessary, mostly repositories and configFilePath.
 # Set up logging (see config.js for more info, why.)
 set LOG_LEVEL=debug
 # Execute renovate on any repository (public or private).
@@ -52,14 +52,6 @@ Where `ghp_...` is a Personal Access Token generated at https://github.com/setti
    To prevent this, use `set RENOVATE_TOKEN=ghp_...` instead.
    
    </details>
-
-</details>
-
-<details><summary>Why?</summary>
-
-Renovate cannot run on a specific branch of a specific repo:
-https://github.com/renovatebot/renovate/discussions/16108
-Not even with `baseBranches` + `useBaseBranchConfig` as of version 32.190.4.
 
 </details>
 
