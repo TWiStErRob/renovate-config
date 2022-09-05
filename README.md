@@ -24,9 +24,13 @@ Each file should have this as the first property to trigger automatic setup when
 ## Local Testing
 This will pick up `config.js` as the base and hence will do a dry-run.
 ```shell
+# Make sure the latest version is installed from package.json.
 npm install
+# Make sure the logs contain meaningful output.
 set LOG_LEVEL=debug
+# Make sure renovate can read the repositories.
 set RENOVATE_TOKEN=ghp_...
+# Execute renovate on any repository (public or private).
 npm run renovate -- TWiStErRob/renovate-config-test > renovate.log
 ```
 Where `ghp_...` is a Personal Access Token generated at https://github.com/settings/tokens.
