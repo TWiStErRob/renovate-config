@@ -22,20 +22,31 @@ Each file should have this as the first property to trigger automatic setup when
 }
 ```
 ## Local Testing
+This will pick up `config.js` as the base and hence will do a dry-run.
 ```shell
 npm install
 set LOG_LEVEL=debug
-# Either:
+set RENOVATE_TOKEN=ghp_...
 npm run renovate -- TWiStErRob/renovate-config-test > renovate.log
-npm run renovate -- --token ghp_... TWiStErRob/renovate-config-test > renovate.log
 ```
 Where `ghp_...` is a Personal Access Token generated at https://github.com/settings/tokens.
  * add `user:email` scope to reduce warnings
  * add `repo` scope for accessing private repositories
- * *Warning*: `npm run` will echo the command line so renovate.log will contain the key.  
-   To prevent this, use `set RENOVATE_TOKEN=ghp_...` instead.
+
+<details><summary><code>--token ghp_...</code> vs <code>set RENOVATE_TOKEN=ghp_...</code></summary>
+
+It's possible to pass the token on command line too:
+```shell
+npm run renovate -- --token ghp_... TWiStErRob/renovate-config-test > renovate.log
+```
+but `npm run` will echo the command line so renovate.log will contain the key. 
+To prevent this, use `set RENOVATE_TOKEN=ghp_...` instead.
+
+</details>
 
 ## Integration Testing
+This means running Renovate on a repository where the configuration is hosted in the repository, and the [Renovate app](https://github.com/apps/renovate) will process everything.
+
 Hack around in [renovate-config-test](https://github.com/TWiStErRob/renovate-config-test).
 
 # Documentation
