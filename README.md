@@ -22,29 +22,44 @@ Each file should have this as the first property to trigger automatic setup when
 }
 ```
 ## Local Testing
-This will pick up `config.js` as the base and hence will do a dry-run.
+This will pick up `config.js` and will do a dry-run.
+
 ```shell
 # Make sure the latest version is installed from package.json.
 npm install
-# Make sure the logs contain meaningful output.
-set LOG_LEVEL=debug
 # Make sure renovate can read the repositories.
 set RENOVATE_TOKEN=ghp_...
+# Edit config.js as necessary, mostly repositories and baseBranches.
 # Execute renovate on any repository (public or private).
-npm run renovate -- TWiStErRob/renovate-config-test > renovate.log
+npm run renovate
 ```
+
+Can `set LOG_LEVEL=warn` to reduce console output.
+
+<details><summary>ghp_...</summary>
+
 Where `ghp_...` is a Personal Access Token generated at https://github.com/settings/tokens.
  * add `user:email` scope to reduce warnings
  * add `repo` scope for accessing private repositories
 
-<details><summary><code>--token ghp_...</code> vs <code>set RENOVATE_TOKEN=ghp_...</code></summary>
+   <details><summary><code>--token</code> vs <code>set RENOVATE_TOKEN</code></summary>
+   
+   It's possible to pass the token on command line too:
+   ```shell
+   npm run renovate -- --token ghp_...
+   ```
+   but `npm run` will echo the command line so renovate.log will contain the key. 
+   To prevent this, use `set RENOVATE_TOKEN=ghp_...` instead.
+   
+   </details>
 
-It's possible to pass the token on command line too:
-```shell
-npm run renovate -- --token ghp_... TWiStErRob/renovate-config-test > renovate.log
-```
-but `npm run` will echo the command line so renovate.log will contain the key. 
-To prevent this, use `set RENOVATE_TOKEN=ghp_...` instead.
+</details>
+
+<details><summary>Why?</summary>
+
+Renovate cannot run on a specific branch of a specific repo:
+https://github.com/renovatebot/renovate/discussions/16108
+Not even with `baseBranches` + `useBaseBranchConfig` as of version 32.190.4.
 
 </details>
 
