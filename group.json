@@ -137,7 +137,8 @@
 				"matchPackagePrefixes": [
 					"com.android.tools:",
 					"com.android.tools.build:",
-					"com.android.tools.lint:"
+					"com.android.tools.lint:",
+					"com.android.tools.ddms:"
 				],
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
