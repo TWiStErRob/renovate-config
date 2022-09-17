@@ -199,5 +199,16 @@
 				"separateMinorPatch": true
 			}
 		]
+	},
+	"log4j2": {
+		"packageRules": [
+			{
+				"groupName": "Log4j 2 monorepo",
+				"description": "Group together all dependencies from Log4J 2",
+				"matchPackagePrefixes": [
+					"org.apache.logging.log4j:"
+				]
+			}
+		]
 	}
 }
