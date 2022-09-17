@@ -12,7 +12,8 @@
 			"github>TWiStErRob/renovate-config:group/androidx",
 			"github>TWiStErRob/renovate-config:group/androidx-test",
 			"github>TWiStErRob/renovate-config:group/mockito",
-			"github>TWiStErRob/renovate-config:group/neo4j"
+			"github>TWiStErRob/renovate-config:group/neo4j",
+			"github>TWiStErRob/renovate-config:group/log4j2"
 		]
 	},
 	"kotlin": {
