@@ -16,10 +16,10 @@
 		]
 	},
 	"kotlin": {
-		"description": "Group together all dependencies from Kotlin, Dokka and KotlinX, including coroutines. See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
 		"packageRules": [
 			{
 				"groupName": "Kotlin",
+				"description": "Group together all dependencies from Kotlin, Dokka and KotlinX, including coroutines. See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
 				"matchSourceUrlPrefixes": [
 					"https://github.com/JetBrains/kotlin"
 				],
@@ -182,10 +182,10 @@
 		]
 	},
 	"neo4j": {
-		"description": "Group together all dependencies from Neo4J and OGM",
 		"packageRules": [
 			{
 				"groupName": "Neo4J monorepo",
+				"description": "Group together all dependencies from Neo4J and OGM",
 				"matchSourceUrlPrefixes": [
 					"https://github.com/neo4j"
 				],
