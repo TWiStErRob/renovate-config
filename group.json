@@ -13,7 +13,8 @@
 			"github>TWiStErRob/renovate-config:group/androidx-test",
 			"github>TWiStErRob/renovate-config:group/mockito",
 			"github>TWiStErRob/renovate-config:group/neo4j",
-			"github>TWiStErRob/renovate-config:group/log4j2"
+			"github>TWiStErRob/renovate-config:group/log4j2",
+			"github>TWiStErRob/renovate-config:group/jackson",
 		]
 	},
 	"kotlin": {
@@ -211,6 +212,20 @@
 				"description": "Group together all dependencies from Log4J 2",
 				"matchPackagePrefixes": [
 					"org.apache.logging.log4j:"
+				]
+			}
+		]
+	},
+	"jackson": {
+		"packageRules": [
+			{
+				"groupName": "Jackson monorepo",
+				"description": "Group together all dependencies of Jackson.",
+				"matchSourceUrlPrefixes": [
+					"https://github.com/FasterXML/jackson-"
+				],
+				"matchPackagePrefixes": [
+					"com.fasterxml.jackson."
 				]
 			}
 		]
