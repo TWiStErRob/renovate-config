@@ -86,6 +86,9 @@
 				"matchSourceUrlPrefixes": [
 					"https://github.com/detekt/detekt"
 				],
+				"matchPackagePrefixes": [
+					"io.gitlab.arturbosch.detekt:"
+				],
 				"matchPackageNames": [
 					"io.gitlab.arturbosch.detekt",
 					"io.gitlab.arturbosch.detekt:detekt-gradle-plugin",
