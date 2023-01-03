@@ -20,5 +20,9 @@
 			"matchCurrentVersion": "!/^0/",
 			"automerge": true
 		}
-	]
+	],
+	"gradle-wrapper": {
+		"description": "Update Gradle wrapper to non-stable versions",
+		"ignoreUnstable": false
+	}
 }
