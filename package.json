@@ -4,7 +4,7 @@
 		"renovate": "renovate"
 	},
 	"devDependencies": {
-		"renovate": "34.1.0"
+		"renovate": "35.0.0"
 	},
 	"jshintConfig": {
 		"esversion": 9
