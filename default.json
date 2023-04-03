@@ -4,7 +4,6 @@
 	"extends": [
 		"config:base",
 		":disableRateLimiting",
-		":disableDependencyDashboard",
 		"github>TWiStErRob/renovate-config:group/all"
 	],
 	"commitMessageExtra": "from {{{currentValue}}} to {{{newValue}}}{{#if isMajor}} (major v{{{newMajor}}}){{else}}{{/if}}",
