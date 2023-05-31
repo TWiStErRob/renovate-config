@@ -10,6 +10,8 @@
 	"separateMajorMinor": true,
 	"separateMultipleMajor": true,
 	"separateMinorPatch": true,
+	"minimumReleaseAge": "8 hours",
+	"internalChecksFilter": "strict",
 	"ignorePaths": [
 		"do-not-ignore-anything"
 	],
@@ -18,6 +20,10 @@
 			"matchUpdateTypes": ["minor", "patch"],
 			"matchCurrentVersion": "!/^0/",
 			"automerge": true
+		},
+		{
+			"matchDatasources": ["npm"],
+			"minimumReleaseAge": "3 days"
 		}
 	],
 	"gradle-wrapper": {
