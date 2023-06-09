@@ -6,6 +6,7 @@
 		":disableRateLimiting",
 		"github>TWiStErRob/renovate-config:group/all"
 	],
+	"semanticCommits": "disabled",
 	"commitMessageExtra": "from {{{currentValue}}} to {{{newValue}}}{{#if isMajor}} (major v{{{newMajor}}}){{else}}{{/if}}",
 	"separateMajorMinor": true,
 	"separateMultipleMajor": true,
