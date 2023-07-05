@@ -35,7 +35,7 @@ module.exports = {
 	// >       "sourceUrl": "https://cs.android.com/androidx/platform/frameworks/support",
 	// >       "hostType": null
 	// https://docs.renovatebot.com/configuration-options/#fetchreleasenotes
-	"fetchReleaseNotes": false,
+	"fetchReleaseNotes": "off",
 
 	// Renovate cannot run on a specific branch of a specific repo:
 	// https://github.com/renovatebot/renovate/discussions/16108
