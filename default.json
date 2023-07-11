@@ -25,6 +25,13 @@
 		{
 			"matchDatasources": ["npm"],
 			"minimumReleaseAge": "3 days"
+		},
+		{
+			"matchDepTypes": ["action"],
+			"matchPackageNames": [
+				"TWiStErRob/github-workflows"
+			],
+			"pinDigests": true
 		}
 	],
 	"gradle-wrapper": {
