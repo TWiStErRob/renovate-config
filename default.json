@@ -23,6 +23,10 @@
 			"automerge": true
 		},
 		{
+			"matchUpdateTypes": ["digest"],
+			"automerge": true
+		},
+		{
 			"matchDatasources": ["npm"],
 			"minimumReleaseAge": "3 days"
 		},
