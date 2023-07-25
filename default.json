@@ -31,6 +31,10 @@
 			"minimumReleaseAge": "3 days"
 		},
 		{
+			"matchPackagePrefixes": ["net.twisterrob"],
+			"minimumReleaseAge": "0 minutes"
+		},
+		{
 			"matchDepTypes": ["action"],
 			"matchPackageNames": [
 				"TWiStErRob/github-workflows"
