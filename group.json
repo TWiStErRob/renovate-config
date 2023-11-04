@@ -22,7 +22,7 @@
 		"packageRules": [
 			{
 				"groupName": "TWiStErRob Gradle",
-				"description": "Group togher all dependencies from the net.twisterrob.gradle monorepo.",
+				"description": "Group together all dependencies from the net.twisterrob.gradle monorepo.",
 				"matchPackagePrefixes": [
 					"net.twisterrob.gradle:",
 					"net.twisterrob.gradle.plugin."
