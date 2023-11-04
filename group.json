@@ -15,7 +15,7 @@
 			"github>TWiStErRob/renovate-config:group/neo4j",
 			"github>TWiStErRob/renovate-config:group/log4j2",
 			"github>TWiStErRob/renovate-config:group/jackson",
-			"github>TWiStErRob/renovate-config:group/notion",
+			"github>TWiStErRob/renovate-config:group/notion"
 		]
 	},
 	"kotlin": {
@@ -25,7 +25,7 @@
 				"description": "Group togher all dependencies from the net.twisterrob.gradle monorepo.",
 				"matchPackagePrefixes": [
 					"net.twisterrob.gradle:",
-					"net.twisterrob.gradle.plugin.",
+					"net.twisterrob.gradle.plugin."
 				]
 			},
 			{
