@@ -31,9 +31,6 @@
 			{
 				"groupName": "Kotlin",
 				"description": "Group together all dependencies from Kotlin, Dokka and KotlinX, including coroutines. See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
-				"matchSourceUrlPrefixes": [
-					"https://github.com/JetBrains/kotlin"
-				],
 				"matchPackagePatterns": [
 					"^org\\.jetbrains\\.kotlin:kotlin-.*$",
 					"^org\\.jetbrains\\.kotlin\\.(.+):org\\.jetbrains\\.kotlin\\.(\\$1)\\.gradle\\.plugin$"
@@ -74,6 +71,17 @@
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
 				"separateMinorPatch": true
+			},
+			{
+				"groupName": "Kotlin",
+				"description": "Group together all dependencies from Kotlin, Dokka and KotlinX, including coroutines. See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
+				"matchSourceUrlPrefixes": [
+					"https://github.com/JetBrains/kotlin"
+				],
+				"versioning": "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
+				"separateMajorMinor": true,
+				"separateMultipleMajor": true,
+				"separateMinorPatch": true
 			}
 		]
 	},
@@ -93,9 +101,6 @@
 			{
 				"groupName": "Detekt monorepo",
 				"description": "Group together all dependencies of Detekt.",
-				"matchSourceUrlPrefixes": [
-					"https://github.com/detekt/detekt"
-				],
 				"matchPackagePrefixes": [
 					"io.gitlab.arturbosch.detekt:"
 				],
@@ -103,6 +108,13 @@
 					"io.gitlab.arturbosch.detekt",
 					"io.gitlab.arturbosch.detekt:detekt-gradle-plugin",
 					"io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin"
+				]
+			},
+			{
+				"groupName": "Detekt monorepo",
+				"description": "Group together all dependencies of Detekt.",
+				"matchSourceUrlPrefixes": [
+					"https://github.com/detekt/detekt"
 				]
 			}
 		]
@@ -200,13 +212,20 @@
 			{
 				"groupName": "Neo4J monorepo",
 				"description": "Group together all dependencies from Neo4J and OGM",
-				"matchSourceUrlPrefixes": [
-					"https://github.com/neo4j"
-				],
 				"matchPackagePatterns": [
 					"^org\\.neo4j:neo4j$",
 					"^org\\.neo4j:neo4j-ogm-.+$",
 					"^org\\.neo4j\\..+:neo4j-.+$"
+				],
+				"separateMajorMinor": true,
+				"separateMultipleMajor": true,
+				"separateMinorPatch": true
+			},
+			{
+				"groupName": "Neo4J monorepo",
+				"description": "Group together all dependencies from Neo4J and OGM",
+				"matchSourceUrlPrefixes": [
+					"https://github.com/neo4j"
 				],
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
@@ -230,11 +249,15 @@
 			{
 				"groupName": "Jackson monorepo",
 				"description": "Group together all dependencies of Jackson.",
-				"matchSourceUrlPrefixes": [
-					"https://github.com/FasterXML/jackson-"
-				],
 				"matchPackagePrefixes": [
 					"com.fasterxml.jackson."
+				]
+			},
+			{
+				"groupName": "Jackson monorepo",
+				"description": "Group together all dependencies of Jackson.",
+				"matchSourceUrlPrefixes": [
+					"https://github.com/FasterXML/jackson-"
 				]
 			}
 		]
@@ -244,11 +267,15 @@
 			{
 				"groupName": "Notion SDK JVM",
 				"description": "Group together all dependencies of Seratch's Notion SDK.",
-				"matchSourceUrlPrefixes": [
-					"https://github.com/seratch/notion-sdk-jvm"
-				],
 				"matchPackagePrefixes": [
 					"com.github.seratch:notion-sdk-jvm-"
+				]
+			},
+			{
+				"groupName": "Notion SDK JVM",
+				"description": "Group together all dependencies of Seratch's Notion SDK.",
+				"matchSourceUrlPrefixes": [
+					"https://github.com/seratch/notion-sdk-jvm"
 				]
 			}
 		]
