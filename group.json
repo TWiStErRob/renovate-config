@@ -4,6 +4,7 @@
 		"extends": [
 			"group:monorepos",
 			"group:recommended",
+			"github>TWiStErRob/renovate-config:group/twisterrob-gradle",
 			"github>TWiStErRob/renovate-config:group/kotlin",
 			"github>TWiStErRob/renovate-config:group/ktor",
 			"github>TWiStErRob/renovate-config:group/detekt",
@@ -18,7 +19,7 @@
 			"github>TWiStErRob/renovate-config:group/notion"
 		]
 	},
-	"kotlin": {
+	"twisterrob-gradle": {
 		"packageRules": [
 			{
 				"groupName": "TWiStErRob Gradle",
@@ -27,7 +28,11 @@
 					"net.twisterrob.gradle:",
 					"net.twisterrob.gradle.plugin."
 				]
-			},
+			}
+		]
+	},
+	"kotlin": {
+		"packageRules": [
 			{
 				"groupName": "Kotlin",
 				"description": "Group together all dependencies from Kotlin, Dokka and KotlinX, including coroutines. See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
