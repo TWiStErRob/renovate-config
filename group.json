@@ -5,6 +5,7 @@
 			"group:monorepos",
 			"group:recommended",
 			"github>TWiStErRob/renovate-config:group/twisterrob-gradle",
+			"github>TWiStErRob/renovate-config:group/github-artifacts",
 			"github>TWiStErRob/renovate-config:group/kotlin",
 			"github>TWiStErRob/renovate-config:group/ktor",
 			"github>TWiStErRob/renovate-config:group/detekt",
@@ -27,6 +28,19 @@
 				"matchPackagePrefixes": [
 					"net.twisterrob.gradle:",
 					"net.twisterrob.gradle.plugin."
+				]
+			}
+		]
+	},
+	"github-artifacts": {
+		"packageRules": [
+			{
+				"groupName": "actions/upload-artifact and actions/download-artifact",
+				"description": "Artifact management is coupled in GitHub Actions. https://github.blog/changelog/2023-12-14-github-actions-artifacts-v4-is-now-generally-available/",
+				"matchManagers": ["github-actions"],
+				"matchPackageNames": [
+					"actions/upload-artifact",
+					"actions/download-artifact"
 				]
 			}
 		]
