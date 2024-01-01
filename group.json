@@ -6,6 +6,7 @@
 			"group:recommended",
 			"github>TWiStErRob/renovate-config:group/twisterrob-gradle",
 			"github>TWiStErRob/renovate-config:group/github-artifacts",
+			"github>TWiStErRob/renovate-config:group/github-pages",
 			"github>TWiStErRob/renovate-config:group/kotlin",
 			"github>TWiStErRob/renovate-config:group/ktor",
 			"github>TWiStErRob/renovate-config:group/detekt",
@@ -41,6 +42,20 @@
 				"matchPackageNames": [
 					"actions/upload-artifact",
 					"actions/download-artifact"
+				]
+			}
+		]
+	},
+	"github-pages": {
+		"packageRules": [
+			{
+				"groupName": "actions/github-pages",
+				"description": "GitHub Pages actions are coupled in GitHub Actions.",
+				"matchManagers": ["github-actions"],
+				"matchPackageNames": [
+					"actions/configure-pages",
+					"actions/upload-pages-artifact",
+					"actions/deploy-pages"
 				]
 			}
 		]
