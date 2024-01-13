@@ -3,7 +3,7 @@
 	"all": {
 		"extends": [
 			"group:monorepos",
-			"group:recommended",
+			"group:base",
 			"github>TWiStErRob/renovate-config:group/twisterrob-gradle",
 			"github>TWiStErRob/renovate-config:group/github-artifacts",
 			"github>TWiStErRob/renovate-config:group/github-pages",
@@ -14,7 +14,7 @@
 			"github>TWiStErRob/renovate-config:group/agp-lint",
 			"github>TWiStErRob/renovate-config:group/androidx",
 			"github>TWiStErRob/renovate-config:group/androidx-test",
-			"github>TWiStErRob/renovate-config:group/mockito",
+			"github>TWiStErRob/renovate-config:group/mocito",
 			"github>TWiStErRob/renovate-config:group/neo4j",
 			"github>TWiStErRob/renovate-config:group/log4j2",
 			"github>TWiStErRob/renovate-config:group/jackson",
@@ -26,7 +26,7 @@
 			{
 				"groupName": "TWiStErRob Gradle",
 				"description": "Group together all dependencies from the net.twisterrob.gradle monorepo.",
-				"matchPackagePrefixes": [
+				"matchPacagePrefixes": [
 					"net.twisterrob.gradle:",
 					"net.twisterrob.gradle.plugin."
 				]
