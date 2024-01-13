@@ -22,11 +22,6 @@ jobs:
       - name: Checkout ${{ github.ref }} branch in ${{ github.repository }} repository.
         uses: actions/checkout@v4
 
-      - name: Cache renovate installation
-        uses: actions/setup-node@v4
-        with:
-          cache: 'npm'
-
       - name: Run renovate-config-validator on shared config.
         run: >
           npx
