@@ -25,6 +25,15 @@
 			"automerge": true
 		},
 		{
+			"description": "Auto-merge all updates of specific dependencies, their 0.x versions are stable and well-controlled.",
+			"matchUpdateTypes": ["minor", "patch"],
+			"matchCurrentVersion": "/^0/",
+			"matchPackageNames": [
+				"org.gradle.toolchains.foojay-resolver-convention"
+			],
+			"automerge": true
+		},
+		{
 			"description": "Auto-merge all digest updates, TODO why?",
 			"matchUpdateTypes": ["digest"],
 			"automerge": true
