@@ -13,7 +13,7 @@ jobs:
             config-files: .github/renovate.json
 
           - name: Shared Config
-            config-files: default.json group.json
+            config-files: default.json # group.json is not possible yet
 
     name: 🔍 ${{ matrix.name }}
     runs-on: ubuntu-latest
