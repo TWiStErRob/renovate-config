@@ -10,10 +10,10 @@ jobs:
         include:
 
           - name: Own Config
-            config-file: .github/renovate.json
+            config-files: .github/renovate.json
 
           - name: Shared Config
-            config-file: default.json
+            config-files: default.json group.json
 
     name: 🔍 ${{ matrix.name }}
     runs-on: ubuntu-latest
@@ -27,4 +27,4 @@ jobs:
           npx
           --yes
           --package renovate
-          --call 'renovate-config-validator --strict ${{ matrix.config-file }}'
+          --call 'renovate-config-validator --strict ${{ matrix.config-files }}'
