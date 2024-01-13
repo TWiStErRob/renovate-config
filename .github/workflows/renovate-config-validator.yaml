@@ -27,4 +27,4 @@ jobs:
           npx
           --yes
           --package renovate
-          --call 'renovate-config-validator --strict --config ${{ matrix.config-file }}'
+          --call 'renovate-config-validator --strict ${{ matrix.config-file }}'
