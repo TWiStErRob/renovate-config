@@ -4,8 +4,16 @@ on:
   push
 
 jobs:
-  shared-config:
-    name: 🔍 Shared Config
+  config:
+    strategy:
+      matrix:
+        include:
+          - name: Own Config
+            config-file: .github/renovate.json
+          - name: Shared Config
+            config-file: default.json
+
+    name: 🔍 ${{ matrix.name }}
     runs-on: ubuntu-latest
     steps:
 
@@ -15,17 +23,4 @@ jobs:
       - name: Run renovate-config-validator on shared config.
         uses: rinchsan/renovate-config-validator@v0.0.12
         with:
-          pattern: 'default.json'
-
-  own-config:
-    name: 🔍 Own Config
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: Checkout ${{ github.ref }} branch in ${{ github.repository }} repository.
-        uses: actions/checkout@v4
-
-      - name: Run renovate-config-validator on repository's own config.
-        uses: rinchsan/renovate-config-validator@v0.0.12
-        with:
-          pattern: '.github/renovate.json'
+          pattern: ${{ matrix.config-file }}
