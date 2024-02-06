@@ -4,7 +4,8 @@
 	"extends": [
 		"config:recommended",
 		":disableRateLimiting",
-		"github>TWiStErRob/renovate-config:group/all"
+		"github>TWiStErRob/renovate-config:group/all",
+		"github>TWiStErRob/renovate-config:replacement/all"
 	],
 	"semanticCommits": "disabled",
 	"configMigration": true,
