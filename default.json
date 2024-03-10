@@ -9,6 +9,7 @@
 	"semanticCommits": "disabled",
 	"configMigration": true,
 	"commitMessageExtra": "from {{{currentValue}}} to {{{newValue}}}{{#if isMajor}} (major v{{{newMajor}}}){{else}}{{/if}}",
+	"labels": ["dependencies"],
 	"separateMajorMinor": true,
 	"separateMultipleMajor": true,
 	"separateMinorPatch": true,
