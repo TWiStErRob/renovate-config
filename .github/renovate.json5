@@ -8,21 +8,21 @@
 			"description": "Causes the bot to create a PR (and thus, an email notification), whenever there is a new major Renovate version.",
 			"matchPackageNames": [
 				"renovate/renovate",
-				"renovate"
+				"renovate",
 			],
 			"matchUpdateTypes": ["major"],
 			"automerge": true,
-			"prCreation": "immediate"
+			"prCreation": "immediate",
 		},
 		{
 			"groupName": "renovate",
 			"description": "Disables the creation of branches/PRs for any non-major updates of Renovate bot.",
 			"matchPackageNames": [
 				"renovate/renovate",
-				"renovate"
+				"renovate",
 			],
 			"matchUpdateTypes": ["minor", "patch", "pin", "digest", "rollback"],
-			"enabled": false
-		}
-	]
+			"enabled": false,
+		},
+	],
 }
