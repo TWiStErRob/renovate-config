@@ -4,7 +4,7 @@
 	"extends": [
 		"config:recommended",
 		":disableRateLimiting",
-		"github>TWiStErRob/renovate-config:group/all"
+		"github>TWiStErRob/renovate-config:group/all",
 	],
 	"semanticCommits": "disabled",
 	"configMigration": true,
@@ -16,50 +16,50 @@
 	"minimumReleaseAge": "8 hours",
 	"internalChecksFilter": "strict",
 	"ignorePaths": [
-		"do-not-ignore-anything"
+		"do-not-ignore-anything",
 	],
 	"packageRules": [
 		{
 			"description": "Auto-merge all small changes, except for unstable versions.",
 			"matchUpdateTypes": ["minor", "patch"],
 			"matchCurrentVersion": "!/^0/",
-			"automerge": true
+			"automerge": true,
 		},
 		{
 			"description": "Auto-merge all updates of specific dependencies, their 0.x versions are stable and well-controlled.",
 			"matchUpdateTypes": ["minor", "patch"],
 			"matchCurrentVersion": "/^0/",
 			"matchPackageNames": [
-				"org.gradle.toolchains.foojay-resolver-convention"
+				"org.gradle.toolchains.foojay-resolver-convention",
 			],
-			"automerge": true
+			"automerge": true,
 		},
 		{
 			"description": "Auto-merge all digest updates, TODO why?",
 			"matchUpdateTypes": ["digest"],
-			"automerge": true
+			"automerge": true,
 		},
 		{
 			"description": "Wait for npm dependencies, they often have small patch releases in quick succession.",
 			"matchDatasources": ["npm"],
-			"minimumReleaseAge": "3 days"
+			"minimumReleaseAge": "3 days",
 		},
 		{
 			"description": "Merge my packages as soon as possible.",
 			"matchPackagePrefixes": ["net.twisterrob"],
-			"minimumReleaseAge": "0 minutes"
+			"minimumReleaseAge": "0 minutes",
 		},
 		{
 			"description": "Pin my reusable workflows, semver might not be true.",
 			"matchDepTypes": ["action"],
 			"matchPackageNames": [
-				"TWiStErRob/github-workflows"
+				"TWiStErRob/github-workflows",
 			],
-			"pinDigests": true
-		}
+			"pinDigests": true,
+		},
 	],
 	"gradle-wrapper": {
 		"description": "Update Gradle wrapper to non-stable versions",
-		"ignoreUnstable": false
-	}
+		"ignoreUnstable": false,
+	},
 }

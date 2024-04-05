@@ -18,8 +18,8 @@
 			"github>TWiStErRob/renovate-config:group/neo4j",
 			"github>TWiStErRob/renovate-config:group/log4j2",
 			"github>TWiStErRob/renovate-config:group/jackson",
-			"github>TWiStErRob/renovate-config:group/notion"
-		]
+			"github>TWiStErRob/renovate-config:group/notion",
+		],
 	},
 	"twisterrob-gradle": {
 		"packageRules": [
@@ -28,10 +28,10 @@
 				"description": "Group together all dependencies from the net.twisterrob.gradle monorepo.",
 				"matchPackagePrefixes": [
 					"net.twisterrob.gradle:",
-					"net.twisterrob.gradle.plugin."
-				]
-			}
-		]
+					"net.twisterrob.gradle.plugin.",
+				],
+			},
+		],
 	},
 	"github-artifacts": {
 		"packageRules": [
@@ -41,11 +41,11 @@
 				"matchManagers": ["github-actions"],
 				"matchPackageNames": [
 					"actions/upload-artifact",
-					"actions/download-artifact"
+					"actions/download-artifact",
 				],
-				"separateMultipleMajor": false
-			}
-		]
+				"separateMultipleMajor": false,
+			},
+		],
 	},
 	"github-pages": {
 		"packageRules": [
@@ -56,11 +56,11 @@
 				"matchPackageNames": [
 					"actions/configure-pages",
 					"actions/upload-pages-artifact",
-					"actions/deploy-pages"
+					"actions/deploy-pages",
 				],
-				"separateMultipleMajor": false
-			}
-		]
+				"separateMultipleMajor": false,
+			},
+		],
 	},
 	"kotlin": {
 		"packageRules": [
@@ -69,7 +69,7 @@
 				"description": "Group together all dependencies from Kotlin, Dokka and KotlinX, including coroutines. See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
 				"matchPackagePatterns": [
 					"^org\\.jetbrains\\.kotlin:kotlin-.*$",
-					"^org\\.jetbrains\\.kotlin\\.(.+):org\\.jetbrains\\.kotlin\\.(\\$1)\\.gradle\\.plugin$"
+					"^org\\.jetbrains\\.kotlin\\.(.+):org\\.jetbrains\\.kotlin\\.(\\$1)\\.gradle\\.plugin$",
 				],
 				"matchPackageNames": [
 					"org.jetbrains.kotlin:kotlin-gradle-plugin",
@@ -101,25 +101,25 @@
 					"kotlin-scripting,",
 					"org.jetbrains.kotlin.plugin.scripting",
 					"kotlin2js",
-					"kotlin-dce-js"
+					"kotlin-dce-js",
 				],
 				"versioning": "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
-				"separateMinorPatch": true
+				"separateMinorPatch": true,
 			},
 			{
 				"groupName": "Kotlin",
 				"description": "Group together all dependencies from Kotlin, Dokka and KotlinX, including coroutines. See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
 				"matchSourceUrlPrefixes": [
-					"https://github.com/JetBrains/kotlin"
+					"https://github.com/JetBrains/kotlin",
 				],
 				"versioning": "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
-				"separateMinorPatch": true
-			}
-		]
+				"separateMinorPatch": true,
+			},
+		],
 	},
 	"ktor": {
 		"packageRules": [
@@ -127,10 +127,10 @@
 				"groupName": "ktor.io monorepo",
 				"description": "Group together all dependencies of ktor.",
 				"matchSourceUrlPrefixes": [
-					"https://github.com/ktorio/ktor"
-				]
-			}
-		]
+					"https://github.com/ktorio/ktor",
+				],
+			},
+		],
 	},
 	"detekt": {
 		"packageRules": [
@@ -138,22 +138,22 @@
 				"groupName": "Detekt monorepo",
 				"description": "Group together all dependencies of Detekt.",
 				"matchPackagePrefixes": [
-					"io.gitlab.arturbosch.detekt:"
+					"io.gitlab.arturbosch.detekt:",
 				],
 				"matchPackageNames": [
 					"io.gitlab.arturbosch.detekt",
 					"io.gitlab.arturbosch.detekt:detekt-gradle-plugin",
-					"io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin"
-				]
+					"io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin",
+				],
 			},
 			{
 				"groupName": "Detekt monorepo",
 				"description": "Group together all dependencies of Detekt.",
 				"matchSourceUrlPrefixes": [
-					"https://github.com/detekt/detekt"
-				]
-			}
-		]
+					"https://github.com/detekt/detekt",
+				],
+			},
+		],
 	},
 	"agp": {
 		"packageRules": [
@@ -183,13 +183,13 @@
 					"com.android.lint",
 					"android-reporting",
 					"com.android.reporting",
-					"com.android.test"
+					"com.android.test",
 				],
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
-				"separateMinorPatch": true
-			}
-		]
+				"separateMinorPatch": true,
+			},
+		],
 	},
 	"agp-lint": {
 		"packageRules": [
@@ -200,13 +200,13 @@
 					"com.android.tools:",
 					"com.android.tools.build:",
 					"com.android.tools.lint:",
-					"com.android.tools.ddms:"
+					"com.android.tools.ddms:",
 				],
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
-				"separateMinorPatch": true
-			}
-		]
+				"separateMinorPatch": true,
+			},
+		],
 	},
 	"androidx": {
 		"packageRules": [
@@ -214,10 +214,10 @@
 				"groupName": "AndroidX Monorepo",
 				"description": "Group together all dependencies from AndroidX.",
 				"matchPackagePrefixes": [
-					"androidx."
-				]
-			}
-		]
+					"androidx.",
+				],
+			},
+		],
 	},
 	"androidx-test": {
 		"packageRules": [
@@ -226,10 +226,10 @@
 				"description": "Group together all dependencies from AndroidX Test (Espresso).",
 				"matchPackagePrefixes": [
 					"androidx.test:",
-					"androidx.test.espresso:"
-				]
-			}
-		]
+					"androidx.test.espresso:",
+				],
+			},
+		],
 	},
 	"mockito": {
 		"packageRules": [
@@ -238,10 +238,10 @@
 				"description": "Add nhaarman dependency to builtin 'mockito monorepo' group.",
 				"matchPackageNames": [
 					"com.nhaarman.mockitokotlin2:mockito-kotlin",
-					"com.nhaarman:mockito-kotlin"
-				]
-			}
-		]
+					"com.nhaarman:mockito-kotlin",
+				],
+			},
+		],
 	},
 	"neo4j": {
 		"packageRules": [
@@ -251,23 +251,23 @@
 				"matchPackagePatterns": [
 					"^org\\.neo4j:neo4j$",
 					"^org\\.neo4j:neo4j-ogm-.+$",
-					"^org\\.neo4j\\..+:neo4j-.+$"
+					"^org\\.neo4j\\..+:neo4j-.+$",
 				],
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
-				"separateMinorPatch": true
+				"separateMinorPatch": true,
 			},
 			{
 				"groupName": "Neo4J monorepo",
 				"description": "Group together all dependencies from Neo4J and OGM",
 				"matchSourceUrlPrefixes": [
-					"https://github.com/neo4j"
+					"https://github.com/neo4j",
 				],
 				"separateMajorMinor": true,
 				"separateMultipleMajor": true,
-				"separateMinorPatch": true
-			}
-		]
+				"separateMinorPatch": true,
+			},
+		],
 	},
 	"log4j2": {
 		"packageRules": [
@@ -275,10 +275,10 @@
 				"groupName": "Log4j 2 monorepo",
 				"description": "Group together all dependencies from Log4J 2",
 				"matchPackagePrefixes": [
-					"org.apache.logging.log4j:"
-				]
-			}
-		]
+					"org.apache.logging.log4j:",
+				],
+			},
+		],
 	},
 	"jackson": {
 		"packageRules": [
@@ -286,17 +286,17 @@
 				"groupName": "Jackson monorepo",
 				"description": "Group together all dependencies of Jackson.",
 				"matchPackagePrefixes": [
-					"com.fasterxml.jackson."
-				]
+					"com.fasterxml.jackson.",
+				],
 			},
 			{
 				"groupName": "Jackson monorepo",
 				"description": "Group together all dependencies of Jackson.",
 				"matchSourceUrlPrefixes": [
-					"https://github.com/FasterXML/jackson-"
-				]
-			}
-		]
+					"https://github.com/FasterXML/jackson-",
+				],
+			},
+		],
 	},
 	"notion": {
 		"packageRules": [
@@ -304,16 +304,16 @@
 				"groupName": "Notion SDK JVM",
 				"description": "Group together all dependencies of Seratch's Notion SDK.",
 				"matchPackagePrefixes": [
-					"com.github.seratch:notion-sdk-jvm-"
-				]
+					"com.github.seratch:notion-sdk-jvm-",
+				],
 			},
 			{
 				"groupName": "Notion SDK JVM",
 				"description": "Group together all dependencies of Seratch's Notion SDK.",
 				"matchSourceUrlPrefixes": [
-					"https://github.com/seratch/notion-sdk-jvm"
-				]
-			}
-		]
-	}
+					"https://github.com/seratch/notion-sdk-jvm",
+				],
+			},
+		],
+	},
 }
