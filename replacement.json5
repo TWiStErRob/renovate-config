@@ -2,19 +2,23 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"all": {
 		"extends": [
-			"github>TWiStErRob/renovate-config:replacement/gradle-build-action-to-setup-gradle",
-			"github>TWiStErRob/renovate-config:replacement/jcenter-flexbox-to-gmaven-flexbox",
-			"github>TWiStErRob/renovate-config:replacement/nhaarman-mockito-kotlin-v1-to-v2",
-			"github>TWiStErRob/renovate-config:replacement/nhaarman-mockitokotlin2-to-mockito-kotlin",
-			"github>TWiStErRob/renovate-config:replacement/gmazzo-gradle-buildconfig-plugin-v3-to-v4",
-			"github>TWiStErRob/renovate-config:replacement/gradle-enterprise-develocity-plugin",
-			"github>TWiStErRob/renovate-config:replacement/gradle-enterprise-develocity-plugin-marker",
-			"github>TWiStErRob/renovate-config:replacement/squareup-retrofit-v1-to-v2",
-			"github>TWiStErRob/renovate-config:replacement/squareup-okhttp-v2-to-v3",
+			// DISABLED https://github.com/renovatebot/renovate/discussions/27107
+			//"github>TWiStErRob/renovate-config:replacement/gradle-build-action-to-setup-gradle",
+
+			// DISABLED https://github.com/renovatebot/renovate/discussions/24883#discussioncomment-8388613
+			// > WARN: gradle manager does not support replacement updates yet
+			//"github>TWiStErRob/renovate-config:replacement/jcenter-flexbox-to-gmaven-flexbox",
+			//"github>TWiStErRob/renovate-config:replacement/nhaarman-mockito-kotlin-v1-to-v2",
+			//"github>TWiStErRob/renovate-config:replacement/nhaarman-mockitokotlin2-to-mockito-kotlin",
+			//"github>TWiStErRob/renovate-config:replacement/gmazzo-gradle-buildconfig-plugin-v3-to-v4",
+			//"github>TWiStErRob/renovate-config:replacement/gradle-enterprise-develocity-plugin",
+			//"github>TWiStErRob/renovate-config:replacement/gradle-enterprise-develocity-plugin-marker",
+			//"github>TWiStErRob/renovate-config:replacement/squareup-retrofit-v1-to-v2",
+			//"github>TWiStErRob/renovate-config:replacement/squareup-okhttp-v2-to-v3",
 		],
 	},
 	"gradle-build-action-to-setup-gradle": {
-		"description": "gradle-build-action is now setup-gradle. https://github.com/gradle/gradle-build-action/releases/tag/v3.0.0\nBroken at the moment: https://github.com/renovatebot/renovate/discussions/27107",
+		"description": "gradle-build-action is now setup-gradle. https://github.com/gradle/gradle-build-action/releases/tag/v3.0.0",
 		"packageRules": [
 			{
 				"matchManagers": ["github-actions"],
@@ -94,7 +98,7 @@
 		],
 	},
 	"squareup-retrofit-v1-to-v2": {
-		"description": "squareup's Retrofit v1 to v2 major. https://github.com/square/retrofit/blob/parent-2.0.0/CHANGELOG.md TODO sub-packages in the monorepo",
+		"description": "squareup's Retrofit v1 to v2 major. https://github.com/square/retrofit/blob/parent-2.0.0/CHANGELOG.md",
 		"packageRules": [
 			{
 				"matchDatasources": ["maven"],
