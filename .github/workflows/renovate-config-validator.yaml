@@ -10,10 +10,10 @@ jobs:
         include:
 
           - name: Own Config
-            config-files: .github/renovate.json
+            config-files: .github/renovate.json5
 
           - name: Shared Config
-            config-files: default.json # group.json is not possible yet
+            config-files: default.json5 # group.json5 is not possible yet
 
     name: 🔍 ${{ matrix.name }}
     runs-on: ubuntu-latest
