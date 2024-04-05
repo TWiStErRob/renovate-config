@@ -8,9 +8,8 @@ Note: this repository is called `renovate-config` so it'll be [picked up automat
  1. Add repository to [Renovate GitHub app installation](https://github.com/settings/installations/24636554).
  2. Wait for "Configure Renovate" onboarding PR.
  3. It should automatically pick up [local>TWiStErRob/renovate-config](default.json5)
- 4. Move `/renovate.json` to `/.github/renovate.json`.
- 5. Commit and push to `renovate/configure` branch.
- 6. Review, configure as necessary and merge PR.
+ 4. Commit and push to `renovate/configure` branch.
+ 5. Review, configure as necessary and merge PR.
 
 # Development
 IntelliJ IDEA has json-schema validation and auto-complete support, so it the recommended editor.
