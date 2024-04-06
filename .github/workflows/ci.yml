@@ -18,3 +18,5 @@ jobs:
   config:
     name: "🔍 Check Renovate"
     uses: ./.github/workflows/renovate-config-validator.yml
+    permissions:
+      contents: read
