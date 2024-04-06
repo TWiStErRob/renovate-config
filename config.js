@@ -1,5 +1,6 @@
 const fs = require('fs');
-const configFilePath = "P:\\projects\\workspace\\net.twisterrob.gradle\\.github\\renovate.json";
+const JSON5 = require('json5');
+const configFilePath = "P:\\projects\\contrib\\github-twisterrob-renovate\\.github\\renovate.json5";
 const configFileText = fs.readFileSync(configFilePath, "utf8");
 module.exports = {
 	// https://docs.renovatebot.com/self-hosted-configuration/#dryrun
@@ -27,7 +28,7 @@ module.exports = {
 	// Command line: last parameter in form of user/repo
 	// https://docs.renovatebot.com/self-hosted-configuration/#repositories
 	"repositories": [
-		{"repository": "TWiStErRob/net.twisterrob.gradle"},
+		{ "repository": "TWiStErRob/renovate-config" },
 	],
 
 	// Reduce noise:
@@ -54,6 +55,6 @@ module.exports = {
 	// rather than from the loaded JSON. REPORT this sounds like a bug.
 	"force": {
 		// This loads a local file instead.
-		...JSON.parse(configFileText)
-	}
+		...JSON5.parse(configFileText),
+	},
 };
