@@ -1,28 +1,28 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"description": "https://www.augmentedmind.de/2021/07/25/renovate-bot-cheat-sheet/#11-keep-up-to-date-with-renovate-bots-development",
-	"configMigration": true,
-	"packageRules": [
+	$schema: "https://docs.renovatebot.com/renovate-schema.json",
+	description: "https://www.augmentedmind.de/2021/07/25/renovate-bot-cheat-sheet/#11-keep-up-to-date-with-renovate-bots-development",
+	configMigration: true,
+	packageRules: [
 		{
-			"groupName": "renovate",
-			"description": "Causes the bot to create a PR (and thus, an email notification), whenever there is a new major Renovate version.",
-			"matchPackageNames": [
+			groupName: "renovate",
+			description: "Causes the bot to create a PR (and thus, an email notification), whenever there is a new major Renovate version.",
+			matchPackageNames: [
 				"renovate/renovate",
-				"renovate"
+				"renovate",
 			],
-			"matchUpdateTypes": ["major"],
-			"automerge": true,
-			"prCreation": "immediate"
+			matchUpdateTypes: ["major"],
+			automerge: true,
+			prCreation: "immediate",
 		},
 		{
-			"groupName": "renovate",
-			"description": "Disables the creation of branches/PRs for any non-major updates of Renovate bot.",
-			"matchPackageNames": [
+			groupName: "renovate",
+			description: "Disables the creation of branches/PRs for any non-major updates of Renovate bot.",
+			matchPackageNames: [
 				"renovate/renovate",
-				"renovate"
+				"renovate",
 			],
-			"matchUpdateTypes": ["minor", "patch", "pin", "digest", "rollback"],
-			"enabled": false
-		}
-	]
+			matchUpdateTypes: ["minor", "patch", "pin", "digest", "rollback"],
+			enabled: false,
+		},
+	],
 }

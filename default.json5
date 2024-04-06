@@ -1,66 +1,66 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"onboardingConfigFileName": ".github/renovate.json5",
-	"extends": [
+	$schema: "https://docs.renovatebot.com/renovate-schema.json",
+	onboardingConfigFileName: ".github/renovate.json5",
+	extends: [
 		"config:recommended",
 		":disableRateLimiting",
 		"local>TWiStErRob/renovate-config:group.json5/all",
 		"local>TWiStErRob/renovate-config:replacement.json5/all",
 	],
-	"semanticCommits": "disabled",
-	"configMigration": true,
-	"commitMessageExtra": "from {{{currentValue}}} to {{{newValue}}}{{#if isMajor}} (major v{{{newMajor}}}){{else}}{{/if}}",
-	"labels": ["in:dependencies"],
-	"separateMajorMinor": true,
-	"separateMultipleMajor": true,
-	"separateMinorPatch": true,
-	"minimumReleaseAge": "8 hours",
-	"internalChecksFilter": "strict",
-	"ignorePaths": [
-		"do-not-ignore-anything"
+	semanticCommits: "disabled",
+	configMigration: true,
+	commitMessageExtra: "from {{{currentValue}}} to {{{newValue}}}{{#if isMajor}} (major v{{{newMajor}}}){{else}}{{/if}}",
+	labels: ["in:dependencies"],
+	separateMajorMinor: true,
+	separateMultipleMajor: true,
+	separateMinorPatch: true,
+	minimumReleaseAge: "8 hours",
+	internalChecksFilter: "strict",
+	ignorePaths: [
+		"do-not-ignore-anything",
 	],
-	"packageRules": [
+	packageRules: [
 		{
-			"description": "Auto-merge all small changes, except for unstable versions.",
-			"matchUpdateTypes": ["minor", "patch"],
-			"matchCurrentVersion": "!/^0/",
-			"automerge": true
+			description: "Auto-merge all small changes, except for unstable versions.",
+			matchUpdateTypes: ["minor", "patch"],
+			matchCurrentVersion: "!/^0/",
+			automerge: true,
 		},
 		{
-			"description": "Auto-merge all updates of specific dependencies, their 0.x versions are stable and well-controlled.",
-			"matchUpdateTypes": ["minor", "patch"],
-			"matchCurrentVersion": "/^0/",
-			"matchPackageNames": [
-				"org.gradle.toolchains.foojay-resolver-convention"
+			description: "Auto-merge all updates of specific dependencies, their 0.x versions are stable and well-controlled.",
+			matchUpdateTypes: ["minor", "patch"],
+			matchCurrentVersion: "/^0/",
+			matchPackageNames: [
+				"org.gradle.toolchains.foojay-resolver-convention",
 			],
-			"automerge": true
+			automerge: true,
 		},
 		{
-			"description": "Auto-merge all digest updates, TODO why?",
-			"matchUpdateTypes": ["digest"],
-			"automerge": true
+			description: "Auto-merge all digest updates, TODO why?",
+			matchUpdateTypes: ["digest"],
+			automerge: true,
 		},
 		{
-			"description": "Wait for npm dependencies, they often have small patch releases in quick succession.",
-			"matchDatasources": ["npm"],
-			"minimumReleaseAge": "3 days"
+			description: "Wait for npm dependencies, they often have small patch releases in quick succession.",
+			matchDatasources: ["npm"],
+			minimumReleaseAge: "3 days",
 		},
 		{
-			"description": "Merge my packages as soon as possible.",
-			"matchPackagePrefixes": ["net.twisterrob"],
-			"minimumReleaseAge": "0 minutes"
+			description: "Merge my packages as soon as possible.",
+			matchPackagePrefixes: ["net.twisterrob"],
+			minimumReleaseAge: "0 minutes",
 		},
 		{
-			"description": "Pin my reusable workflows, semver might not be true.",
-			"matchDepTypes": ["action"],
-			"matchPackageNames": [
-				"TWiStErRob/github-workflows"
+			description: "Pin my reusable workflows, semver might not be true.",
+			matchDepTypes: ["action"],
+			matchPackageNames: [
+				"TWiStErRob/github-workflows",
 			],
-			"pinDigests": true
-		}
+			pinDigests: true,
+		},
 	],
 	"gradle-wrapper": {
-		"description": "Update Gradle wrapper to non-stable versions",
-		"ignoreUnstable": false
-	}
+		description: "Update Gradle wrapper to non-stable versions",
+		ignoreUnstable: false,
+	},
 }
