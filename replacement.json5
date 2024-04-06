@@ -1,7 +1,7 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	$schema: "https://docs.renovatebot.com/renovate-schema.json",
 	"all": {
-		"extends": [
+		extends: [
 			// DISABLED https://github.com/renovatebot/renovate/discussions/27107
 			//"local>TWiStErRob/renovate-config:replacement.json5/gradle-build-action-to-setup-gradle",
 
@@ -18,104 +18,104 @@
 		],
 	},
 	"gradle-build-action-to-setup-gradle": {
-		"description": "gradle-build-action is now setup-gradle. https://github.com/gradle/gradle-build-action/releases/tag/v3.0.0",
-		"packageRules": [
+		description: "gradle-build-action is now setup-gradle. https://github.com/gradle/gradle-build-action/releases/tag/v3.0.0",
+		packageRules: [
 			{
-				"matchManagers": ["github-actions"],
-				"matchDepNames": ["gradle/gradle-build-action"],
-				"replacementName": "gradle/actions/setup-gradle",
-				"replacementVersion": "3.0.0",
+				matchManagers: ["github-actions"],
+				matchDepNames: ["gradle/gradle-build-action"],
+				replacementName: "gradle/actions/setup-gradle",
+				replacementVersion: "3.0.0",
 			},
 		],
 	},
 	"jcenter-flexbox-to-gmaven-flexbox": {
-		"description": "Google flexbox-layout artifact group coordinate. https://github.com/google/flexbox-layout/releases/tag/3.0.0",
-		"packageRules": [
+		description: "Google flexbox-layout artifact group coordinate. https://github.com/google/flexbox-layout/releases/tag/3.0.0",
+		packageRules: [
 			{
-				"matchDatasources": ["maven"],
-				"matchPackageNames": ["com.google.android:flexbox"],
-				"replacementName": "com.google.android.flexbox:flexbox",
-				"replacementVersion": "3.0.0",
+				matchDatasources: ["maven"],
+				matchPackageNames: ["com.google.android:flexbox"],
+				replacementName: "com.google.android.flexbox:flexbox",
+				replacementVersion: "3.0.0",
 			},
 		],
 	},
 	"nhaarman-mockito-kotlin-v1-to-v2": {
-		"description": "nhaarman's Mockito Kotlin v1 to v2 major. https://github.com/mockito/mockito-kotlin/releases/tag/2.0.0",
-		"packageRules": [
+		description: "nhaarman's Mockito Kotlin v1 to v2 major. https://github.com/mockito/mockito-kotlin/releases/tag/2.0.0",
+		packageRules: [
 			{
-				"matchDatasources": ["maven"],
-				"matchPackageNames": [
+				matchDatasources: ["maven"],
+				matchPackageNames: [
 					"com.nhaarman:mockito-kotlin",
 					"com.nhaarman:mockito-kotlin-kt1.1",
 				],
-				"replacementName": "com.nhaarman.mockitokotlin2:mockito-kotlin",
-				"replacementVersion": "2.0.0",
+				replacementName: "com.nhaarman.mockitokotlin2:mockito-kotlin",
+				replacementVersion: "2.0.0",
 			},
 		],
 	},
 	"nhaarman-mockitokotlin2-to-mockito-kotlin": {
-		"description": "nhaarman's Mockito Kotlin official Mockito adoption. https://github.com/mockito/mockito-kotlin/releases/tag/2.2.6",
-		"packageRules": [
+		description: "nhaarman's Mockito Kotlin official Mockito adoption. https://github.com/mockito/mockito-kotlin/releases/tag/2.2.6",
+		packageRules: [
 			{
-				"matchDatasources": ["maven"],
-				"matchPackageNames": ["com.nhaarman.mockitokotlin2:mockito-kotlin"],
-				"replacementName": "org.mockito.kotlin:mockito-kotlin",
-				"replacementVersion": "2.2.7",
+				matchDatasources: ["maven"],
+				matchPackageNames: ["com.nhaarman.mockitokotlin2:mockito-kotlin"],
+				replacementName: "org.mockito.kotlin:mockito-kotlin",
+				replacementVersion: "2.2.7",
 			},
 		],
 	},
 	"gmazzo-gradle-buildconfig-plugin-v3-to-v4": {
-		"description": "gmazzo's Gradle BuildConfig Plugin v3 to v4 major. https://github.com/gmazzo/gradle-buildconfig-plugin/releases/tag/v4.0.0",
-		"packageRules": [
+		description: "gmazzo's Gradle BuildConfig Plugin v3 to v4 major. https://github.com/gmazzo/gradle-buildconfig-plugin/releases/tag/v4.0.0",
+		packageRules: [
 			{
-				"matchDatasources": ["maven"],
-				"matchPackageNames": ["com.github.gmazzo:gradle-buildconfig-plugin"],
-				"replacementName": "com.github.gmazzo.buildconfig:plugin",
-				"replacementVersion": "4.0.0",
+				matchDatasources: ["maven"],
+				matchPackageNames: ["com.github.gmazzo:gradle-buildconfig-plugin"],
+				replacementName: "com.github.gmazzo.buildconfig:plugin",
+				replacementVersion: "4.0.0",
 			},
 		],
 	},
 	"gradle-enterprise-develocity-plugin": {
-		"description": "Gradle Enterprise is now Develocity. https://plugins.gradle.org/plugin/com.gradle.enterprise/3.17",
-		"packageRules": [
+		description: "Gradle Enterprise is now Develocity. https://plugins.gradle.org/plugin/com.gradle.enterprise/3.17",
+		packageRules: [
 			{
-				"matchDatasources": ["maven"],
-				"matchDepNames": ["com.gradle.enterprise"],
-				"replacementName": "com.gradle.develocity",
-				"replacementVersion": "3.17",
+				matchDatasources: ["maven"],
+				matchDepNames: ["com.gradle.enterprise"],
+				replacementName: "com.gradle.develocity",
+				replacementVersion: "3.17",
 			},
 		],
 	},
 	"gradle-enterprise-develocity-plugin-marker": {
-		"description": "Gradle Enterprise is now Develocity. https://plugins.gradle.org/plugin/com.gradle.enterprise/3.17",
-		"packageRules": [
+		description: "Gradle Enterprise is now Develocity. https://plugins.gradle.org/plugin/com.gradle.enterprise/3.17",
+		packageRules: [
 			{
-				"matchDatasources": ["maven"],
-				"matchDepNames": ["com.gradle.enterprise:com.gradle.enterprise.gradle.plugin"],
-				"replacementName": "com.gradle.develocity:com.gradle.develocity.gradle.plugin",
-				"replacementVersion": "3.17",
+				matchDatasources: ["maven"],
+				matchDepNames: ["com.gradle.enterprise:com.gradle.enterprise.gradle.plugin"],
+				replacementName: "com.gradle.develocity:com.gradle.develocity.gradle.plugin",
+				replacementVersion: "3.17",
 			},
 		],
 	},
 	"squareup-retrofit-v1-to-v2": {
-		"description": "squareup's Retrofit v1 to v2 major. https://github.com/square/retrofit/blob/parent-2.0.0/CHANGELOG.md",
-		"packageRules": [
+		description: "squareup's Retrofit v1 to v2 major. https://github.com/square/retrofit/blob/parent-2.0.0/CHANGELOG.md",
+		packageRules: [
 			{
-				"matchDatasources": ["maven"],
-				"matchPackageNames": ["com.squareup.retrofit:retrofit"],
-				"replacementName": "com.squareup.retrofit2:retrofit",
-				"replacementVersion": "2.0.0",
+				matchDatasources: ["maven"],
+				matchPackageNames: ["com.squareup.retrofit:retrofit"],
+				replacementName: "com.squareup.retrofit2:retrofit",
+				replacementVersion: "2.0.0",
 			},
 		],
 	},
 	"squareup-okhttp-v2-to-v3": {
-		"description": "squareup's OkHTTP v2 to v3 major. https://square.github.io/okhttp/changelogs/changelog_3x/#version-300-rc1",
-		"packageRules": [
+		description: "squareup's OkHTTP v2 to v3 major. https://square.github.io/okhttp/changelogs/changelog_3x/#version-300-rc1",
+		packageRules: [
 			{
-				"matchDatasources": ["maven"],
-				"matchPackageNames": ["com.squareup.okhttp:okhttp"],
-				"replacementName": "com.squareup.okhttp3:okhttp",
-				"replacementVersion": "3.0.0",
+				matchDatasources: ["maven"],
+				matchPackageNames: ["com.squareup.okhttp:okhttp"],
+				replacementName: "com.squareup.okhttp3:okhttp",
+				replacementVersion: "3.0.0",
 			},
 		],
 	},
