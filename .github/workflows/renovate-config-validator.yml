@@ -23,7 +23,7 @@ jobs:
           #- name: "Group Presets"
           #  config-files: group.json5
 
-    name: "🔍 ${{ matrix.name }}"
+    name: "${{ matrix.name }}"
     timeout-minutes: 2
     permissions:
       # actions/checkout
