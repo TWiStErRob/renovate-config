@@ -1,0 +1,22 @@
+name: "CI"
+
+on:
+  push:
+
+jobs:
+
+  validate:
+    name: "🦺 Validation"
+    uses: TWiStErRob/github-workflows/.github/workflows/validate.yml@v3
+    with:
+      gradle: false
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+
+  config:
+    name: "🔍 Check Renovate"
+    uses: ./.github/workflows/renovate-config-validator.yml
+    permissions:
+      contents: read
