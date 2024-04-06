@@ -237,6 +237,7 @@
 				groupName: "mockito monorepo",
 				description: "Add nhaarman dependency to builtin 'mockito monorepo' group.",
 				matchPackageNames: [
+					"org.mockito.kotlin:mockito-kotlin",
 					"com.nhaarman.mockitokotlin2:mockito-kotlin",
 					"com.nhaarman:mockito-kotlin",
 				],
