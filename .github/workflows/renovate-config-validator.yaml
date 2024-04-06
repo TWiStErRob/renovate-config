@@ -1,28 +1,41 @@
-name: Validate Renovate Config
+name: "Validate Renovate Config"
 
 on:
-  push
+  push:
 
 jobs:
   config:
     strategy:
+      fail-fast: false
       matrix:
         include:
 
-          - name: Own Config
-            config-files: .github/renovate.json
+          - name: "Own Config"
+            config-files: .github/renovate.json5
 
-          - name: Shared Config
-            config-files: default.json # group.json is not possible yet
+          - name: "Shared Config"
+            config-files: default.json
 
-    name: 🔍 ${{ matrix.name }}
+          - name: "Shared Config (Actual)"
+            config-files: default.json5
+
+          # Not possible yet: "Configuration Error: Invalid configuration option: all".
+          #- name: "Group Presets"
+          #  config-files: group.json5
+
+    name: "🔍 ${{ matrix.name }}"
+    timeout-minutes: 2
+    permissions:
+      # actions/checkout
+      contents: read
     runs-on: ubuntu-latest
     steps:
 
-      - name: Checkout ${{ github.ref }} branch in ${{ github.repository }} repository.
+      - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
         uses: actions/checkout@v4
 
-      - name: Run renovate-config-validator on shared config.
+      - name: "Run renovate-config-validator on shared config."
+        shell: bash
         run: >
           npx
           --yes

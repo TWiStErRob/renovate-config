@@ -1,10 +1,10 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"onboardingConfigFileName": ".github/renovate.json",
+	"onboardingConfigFileName": ".github/renovate.json5",
 	"extends": [
 		"config:recommended",
 		":disableRateLimiting",
-		"github>TWiStErRob/renovate-config:group/all"
+		"local>TWiStErRob/renovate-config:group.json5/all"
 	],
 	"semanticCommits": "disabled",
 	"configMigration": true,

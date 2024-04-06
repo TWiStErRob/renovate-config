@@ -4,6 +4,7 @@
 		"renovate": "renovate"
 	},
 	"devDependencies": {
+		"json5": "2.2.3",
 		"renovate": "37.0.0"
 	},
 	"jshintConfig": {
