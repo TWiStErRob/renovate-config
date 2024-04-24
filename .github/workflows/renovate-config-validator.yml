@@ -21,7 +21,7 @@ jobs:
 
           # Not possible yet: "Configuration Error: Invalid configuration option: all".
           #- name: "Group Presets"
-          #  config-files: group.json5
+          #  config-file: group.json5
 
     name: "${{ matrix.name }}"
     timeout-minutes: 2
@@ -30,6 +30,13 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     steps:
+
+      - name: "Cache NPX."
+        uses: actions/cache@v4
+        with:
+          key: npx-${{ github.workflow }}-${{ github.job }}
+          path: |
+            ~/.npm/_npx
 
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
         uses: actions/checkout@v4
@@ -42,4 +49,7 @@ jobs:
           npx
           --yes
           --package renovate
-          --call "renovate-config-validator --strict '${FILE}'"
+          --
+          renovate-config-validator
+          --strict
+          ${FILE}
