@@ -19,6 +19,7 @@
 			"local>TWiStErRob/renovate-config:group.json5/log4j2",
 			"local>TWiStErRob/renovate-config:group.json5/jackson",
 			"local>TWiStErRob/renovate-config:group.json5/notion",
+			"local>TWiStErRob/renovate-config:group.json5/mkdocs",
 		],
 	},
 	"twisterrob-gradle": {
@@ -313,6 +314,18 @@
 				description: "Group together all dependencies of Seratch's Notion SDK.",
 				matchSourceUrlPrefixes: [
 					"https://github.com/seratch/notion-sdk-jvm",
+				],
+			},
+		],
+	},
+	"mkdocs": {
+		packageRules: [
+			{
+				groupName: "mkdocs",
+				description: "Group together coupled dependencies of mkdocs.",
+				matchPackageNames: [
+					"mkdocs",
+					"mkdocs-material",
 				],
 			},
 		],
