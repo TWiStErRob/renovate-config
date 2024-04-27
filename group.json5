@@ -322,11 +322,14 @@
 		packageRules: [
 			{
 				groupName: "mkdocs",
-				description: "Group together coupled dependencies of mkdocs.",
+				description: "Group together coupled dependencies of mkdocs. They use semver, but require a specific minor version (mkdocs 1.6.0) in a patch release (mkdocs-material 9.5.19).",
 				matchPackageNames: [
 					"mkdocs",
 					"mkdocs-material",
 				],
+				separateMinorPatch: false,
+				separateMajorMinor: false,
+				separateMultipleMajor: false,
 			},
 		],
 	},
