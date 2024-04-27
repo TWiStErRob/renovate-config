@@ -1,7 +1,9 @@
 {
 	$schema: "https://docs.renovatebot.com/renovate-schema.json",
 	description: "https://www.augmentedmind.de/2021/07/25/renovate-bot-cheat-sheet/#11-keep-up-to-date-with-renovate-bots-development",
-	configMigration: true,
+	extends: [
+		"local>TWiStErRob/renovate-config"
+	],
 	packageRules: [
 		{
 			groupName: "renovate",
