@@ -4,6 +4,55 @@ on:
   workflow_call:
 
 jobs:
+
+  json5:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+
+          - name: "Own Config"
+            config-file: .github/renovate.json5
+
+          - name: "Shared Config (Actual)"
+            config-file: default.json5
+
+          - name: "Group Presets"
+            config-file: group.json5
+
+          - name: "Replacements"
+            config-file: replacement.json5
+
+    name: "${{ matrix.name }} (JSON5)"
+    timeout-minutes: 2
+    permissions:
+      # actions/checkout
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: "Cache NPX."
+        uses: actions/cache@v4
+        with:
+          key: npx-${{ github.workflow }}-${{ github.job }}
+          path: |
+            ~/.npm/_npx
+
+      - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
+        uses: actions/checkout@v4
+
+      - name: "Run json5 validator on ${{ env.FILE }}."
+        env:
+          FILE: ${{ matrix.config-file }}
+        shell: bash
+        run: >
+          npx
+          --yes
+          json5
+          --validate
+          "${FILE}"
+
+
   config:
     strategy:
       fail-fast: false
@@ -23,7 +72,7 @@ jobs:
           #- name: "Group Presets"
           #  config-file: group.json5
 
-    name: "${{ matrix.name }}"
+    name: "${{ matrix.name }} (Renovate)"
     timeout-minutes: 2
     permissions:
       # actions/checkout
@@ -41,7 +90,7 @@ jobs:
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
         uses: actions/checkout@v4
 
-      - name: "Run renovate-config-validator on shared config."
+      - name: "Run renovate-config-validator on ${{ env.FILE }}."
         env:
           FILE: ${{ matrix.config-file }}
         shell: bash
@@ -52,4 +101,4 @@ jobs:
           --
           renovate-config-validator
           --strict
-          ${FILE}
+          "${FILE}"
