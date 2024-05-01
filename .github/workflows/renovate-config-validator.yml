@@ -4,6 +4,35 @@ on:
   workflow_call:
 
 jobs:
+  json:
+    name: "JSON5 validation"
+    timeout-minutes: 2
+    permissions:
+      # actions/checkout
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: "Cache NPX."
+        uses: actions/cache@v4
+        with:
+          key: npx-${{ github.workflow }}-${{ github.job }}
+          path: |
+            ~/.npm/_npx
+
+      - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
+        uses: actions/checkout@v4
+
+      - name: "Run json5 validator."
+        shell: bash
+        run: >
+          npx
+          --yes
+          json5
+          --validate
+          *.json5
+
+  
   config:
     strategy:
       fail-fast: false
