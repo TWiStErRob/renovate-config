@@ -193,11 +193,22 @@
 				groupName: "Android Gradle Plugin",
 				description: "Group together all related dependencies from AGP.",
 				matchPackagePrefixes: [
+					// There's a lot, see https://maven.google.com/web/index.html?q=com.android.tools .
+					// Manually removed the ones that don't have the Build Tools monorepo versioning.
 					"com.android.tools:",
 					"com.android.tools.build:",
 					"com.android.tools.lint:",
-					// There's a lot, see https://maven.google.com/web/index.html?q=com.android.tools
-					"com.android.tools.",
+					"com.android.tools.analytics-library:",
+					"com.android.tools.apkparser:",
+					"com.android.tools.chunkio:",
+					"com.android.tools.ddms:",
+					"com.android.tools.emulator:",
+					"com.android.tools.external.com-intellij:",
+					"com.android.tools.external.org-jetbrains:",
+					"com.android.tools.fakeadbserver:",
+					"com.android.tools.layoutlib:layoutlib-api",
+					"com.android.tools.pixelprobe:",
+					"com.android.tools.utp:",
 				],
 				separateMajorMinor: true,
 				separateMultipleMajor: true,
