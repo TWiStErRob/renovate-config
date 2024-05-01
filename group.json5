@@ -198,7 +198,7 @@
 					"com.android.tools:",
 					"com.android.tools.build:",
 					"com.android.tools.lint:",
-					"com.android.tools.analytics-library:"
+					"com.android.tools.analytics-library:",
 					"com.android.tools.apkparser:",
 					"com.android.tools.chunkio:",
 					"com.android.tools.ddms:",
