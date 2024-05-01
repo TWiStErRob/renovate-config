@@ -55,7 +55,7 @@
 				matchManagers: ["github-actions"],
 				matchPackageNames: [
 					"actions/configure-pages",
-					"actions/upload-pages-artifact",
+					"actions/upload-pages-artifact"
 					"actions/deploy-pages",
 				],
 				separateMultipleMajor: false,
