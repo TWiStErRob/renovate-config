@@ -41,17 +41,18 @@ jobs:
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
         uses: actions/checkout@v4
 
-      - name: "Run json5 validator."
+      - name: "Run json5 validator on ${{ env.FILE }}."
+        env:
+          FILE: ${{ matrix.config-file }}
         shell: bash
         run: >
           npx
           --yes
           json5
           --validate
-          .github/renovate.json5
-          *.json5
+          "${FILE}"
 
-  
+
   config:
     strategy:
       fail-fast: false
@@ -89,7 +90,7 @@ jobs:
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
         uses: actions/checkout@v4
 
-      - name: "Run renovate-config-validator on shared config."
+      - name: "Run renovate-config-validator on ${{ env.FILE }}."
         env:
           FILE: ${{ matrix.config-file }}
         shell: bash
@@ -100,4 +101,4 @@ jobs:
           --
           renovate-config-validator
           --strict
-          ${FILE}
+          "${FILE}"
