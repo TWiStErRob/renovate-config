@@ -102,6 +102,7 @@
 					"org.jetbrains.kotlin.plugin.scripting",
 					"kotlin2js",
 					"kotlin-dce-js",
+					"org.jetbrains.kotlin.plugin.compose",
 				],
 				versioning: "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
 				separateMajorMinor: true,
