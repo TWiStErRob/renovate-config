@@ -182,8 +182,10 @@
 				groupName: "Android Gradle Plugin",
 				description: "Group together all dependencies and plugin aliases from AGP.",
 				matchPackageNames: [
+					// This is the main entry point, so listing it for documentation.
 					"com.android.tools.build:gradle",
-					"android",
+				],
+				matchDepNames: [
 					"com.android.application",
 					"com.android.asset-pack",
 					"com.android.asset-pack-bundle",
@@ -199,20 +201,11 @@
 					"com.android.internal.reporting",
 					"com.android.internal.test",
 					"com.android.internal.version-check",
-					"android-library",
 					"com.android.library",
 					"com.android.lint",
-					"android-reporting",
 					"com.android.reporting",
 					"com.android.test",
 				],
-				separateMajorMinor: true,
-				separateMultipleMajor: true,
-				separateMinorPatch: true,
-			},
-			{
-				groupName: "Android Gradle Plugin",
-				description: "Group together all related dependencies from AGP.",
 				matchPackagePrefixes: [
 					// There's a lot, see https://maven.google.com/web/index.html?q=com.android.tools .
 					// Manually removed the ones that don't have the Build Tools monorepo versioning.
@@ -230,6 +223,23 @@
 					"com.android.tools.layoutlib:layoutlib-api",
 					"com.android.tools.pixelprobe:",
 					"com.android.tools.utp:",
+				],
+				separateMajorMinor: true,
+				separateMultipleMajor: true,
+				separateMinorPatch: true,
+			},
+			{
+				// Note: this is a separate rule, because of the too generic un-prefixed dep names.
+				// Combining with a sourceUrl matcher to restrict the scope.
+				groupName: "Android Gradle Plugin",
+				description: "Group together all dependencies and plugin aliases from AGP.",
+				sourceUrls: [
+					"https://android.googlesource.com/platform/tools/base",
+				],
+				matchDepNames: [
+					"android", // => com.android.application
+					"android-library", // => com.android.library
+					"android-reporting", // => com.android.reporting
 				],
 				separateMajorMinor: true,
 				separateMultipleMajor: true,
