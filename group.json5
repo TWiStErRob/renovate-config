@@ -327,7 +327,7 @@
 					"com.squareup.retrofit:",
 				],
 				"matchNewValue": "2.*",
-				"enabled": false
+				"enabled": false,
 			},
 			// Cannot have matchSourceUrls: [ "https://github.com/square/retrofit" ],
 			// because different versions existed in the same repository.
@@ -389,7 +389,7 @@
 				matchSourceUrls: [
 					"https://github.com/square/okio",
 				],
-			}
+			},
 		],
 	},
 	"notion": {
