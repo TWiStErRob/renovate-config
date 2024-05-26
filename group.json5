@@ -117,7 +117,7 @@
 			{
 				groupName: "Kotlin",
 				description: "Group together all dependencies from Kotlin, Dokka and KotlinX, including coroutines. See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
-				matchSourceUrlPrefixes: [
+				matchSourceUrls: [
 					"https://github.com/JetBrains/kotlin",
 				],
 				versioning: "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
@@ -147,7 +147,7 @@
 			{
 				groupName: "ktor.io monorepo",
 				description: "Group together all dependencies of ktor.",
-				matchSourceUrlPrefixes: [
+				matchSourceUrls: [
 					"https://github.com/ktorio/ktor",
 				],
 			},
@@ -170,7 +170,7 @@
 			{
 				groupName: "Detekt monorepo",
 				description: "Group together all dependencies of Detekt.",
-				matchSourceUrlPrefixes: [
+				matchSourceUrls: [
 					"https://github.com/detekt/detekt",
 				],
 			},
@@ -290,7 +290,7 @@
 			{
 				groupName: "Neo4J monorepo",
 				description: "Group together all dependencies from Neo4J and OGM",
-				matchSourceUrlPrefixes: [
+				matchSourceUrls: [
 					"https://github.com/neo4j",
 				],
 				separateMajorMinor: true,
@@ -420,7 +420,7 @@
 			{
 				groupName: "Notion SDK JVM",
 				description: "Group together all dependencies of Seratch's Notion SDK.",
-				matchSourceUrlPrefixes: [
+				matchSourceUrls: [
 					"https://github.com/seratch/notion-sdk-jvm",
 				],
 			},
