@@ -19,6 +19,8 @@
 			"local>TWiStErRob/renovate-config:group.json5/jackson",
 			"local>TWiStErRob/renovate-config:group.json5/retrofit1",
 			"local>TWiStErRob/renovate-config:group.json5/retrofit2",
+			"local>TWiStErRob/renovate-config:group.json5/okhttp1_2",
+			"local>TWiStErRob/renovate-config:group.json5/okhttp3",
 			"local>TWiStErRob/renovate-config:group.json5/okio",
 			"local>TWiStErRob/renovate-config:group.json5/notion",
 			"local>TWiStErRob/renovate-config:group.json5/mkdocs",
@@ -341,6 +343,34 @@
 				],
 			},
 			// Cannot have matchSourceUrls: [ "https://github.com/square/retrofit" ],
+			// because different versions existed in the same repository.
+		],
+	},
+	"okhttp1_2": {
+		packageRules: [
+			{
+				groupName: "OkHttp monorepo",
+				description: "Group together all dependencies of OkHttp.",
+				matchPackagePrefixes: [
+					"com.squareup.okhttp:",
+				],
+			},
+			// Cannot have matchSourceUrls: [ "https://github.com/square/okhttp" ],
+			// because different versions existed in the same repository.
+		],
+	},
+	"okhttp3": {
+		packageRules: [
+			{
+				// OkHttp 3 4.x exists, this is because it's functionally equivalent.
+				// Major change only exists to signify binary-compatible full Kotlin rewrite.
+				groupName: "OkHttp 3 monorepo",
+				description: "Group together all dependencies of OkHttp 3.",
+				matchPackagePrefixes: [
+					"com.squareup.okhttp3:",
+				],
+			},
+			// Cannot have matchSourceUrls: [ "https://github.com/square/okhttp" ],
 			// because different versions existed in the same repository.
 		],
 	},
