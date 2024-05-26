@@ -71,52 +71,74 @@
 		packageRules: [
 			{
 				groupName: "Kotlin",
-				description: "Group together all dependencies from Kotlin, Dokka and KotlinX, including coroutines. See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
+				description: "Group together all dependencies and plugins from Kotlin, Dokka and KotlinX, including coroutines.",
 				matchPackagePatterns: [
 					"^org\\.jetbrains\\.kotlin:kotlin-.*$",
 					"^org\\.jetbrains\\.kotlin\\.(.+):org\\.jetbrains\\.kotlin\\.(\\$1)\\.gradle\\.plugin$",
 				],
 				matchPackageNames: [
 					"org.jetbrains.kotlin:kotlin-gradle-plugin",
-					"org.jetbrains.kotlin.js",
-					"kotlin",
-					"org.jetbrains.kotlin.jvm",
-					"kotlin-kapt",
-					"org.jetbrains.kotlin.kapt",
-					"kotlin-android",
+				],
+				matchDepNames: [
 					"org.jetbrains.kotlin.android",
-					"kotlin-android-extensions",
 					"org.jetbrains.kotlin.android.extensions",
-					"kotlin-multiplatform",
+					"org.jetbrains.kotlin.js",
+					"org.jetbrains.kotlin.jvm",
+					"org.jetbrains.kotlin.kapt",
 					"org.jetbrains.kotlin.multiplatform",
-					"kotlin-native-cocoapods",
 					"org.jetbrains.kotlin.native.cocoapods",
-					"kotlin-native-performance",
 					"org.jetbrains.kotlin.native.performance",
-					"kotlin-platform-android",
 					"org.jetbrains.kotlin.platform.android",
-					"kotlin-platform-common",
 					"org.jetbrains.kotlin.platform.common",
-					"kotlin-platform-js",
 					"org.jetbrains.kotlin.platform.js",
-					"kotlin-platform-jvm",
 					"org.jetbrains.kotlin.platform.jvm",
-					"kotlin-parcelize",
 					"org.jetbrains.kotlin.plugin.parcelize",
-					"kotlin-scripting",
 					"org.jetbrains.kotlin.plugin.scripting",
-					"kotlin2js",
-					"kotlin-dce-js",
+					// New in 2.0.0 @ org.jetbrains.kotlin:compose-compiler-gradle-plugin.
 					"org.jetbrains.kotlin.plugin.compose",
 				],
+				// See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1.
 				versioning: "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
 				separateMajorMinor: true,
 				separateMultipleMajor: true,
 				separateMinorPatch: true,
 			},
 			{
+				// Note: this is a separate rule, because of the too generic un-prefixed dep names.
+				// Combining with manager and sourceUrl matchers to restrict the scope.
 				groupName: "Kotlin",
-				description: "Group together all dependencies from Kotlin, Dokka and KotlinX, including coroutines. See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1",
+				description: "Group together all dependencies and plugins from Kotlin, Dokka and KotlinX, including coroutines.",
+				matchManagers: ["gradle"],
+				matchSourceUrls: ["https://github.com/JetBrains/kotlin"],
+				matchDepNames: [
+					"kotlin", // => org.jetbrains.kotlin.jvm
+					"kotlin-android", // => org.jetbrains.kotlin.android
+					"kotlin-android-extensions", // => org.jetbrains.kotlin.android.extensions
+					// New in 2.0.0 @ org.jetbrains.kotlin:compose-compiler-gradle-plugin.
+					"kotlin-composecompiler", // => org.jetbrains.kotlin.plugin.compose
+					"kotlin-kapt", // => org.jetbrains.kotlin.kapt
+					"kotlin-multiplatform", // => org.jetbrains.kotlin.multiplatform
+					"kotlin-native-cocoapods", // => org.jetbrains.kotlin.native.cocoapods
+					"kotlin-native-performance", // => org.jetbrains.kotlin.native.performance
+					"kotlin-parcelize", // => org.jetbrains.kotlin.plugin.parcelize
+					"kotlin-platform-android", // => org.jetbrains.kotlin.platform.android
+					"kotlin-platform-common", // => org.jetbrains.kotlin.platform.common
+					"kotlin-platform-js", // => org.jetbrains.kotlin.platform.js
+					"kotlin-platform-jvm", // => org.jetbrains.kotlin.platform.jvm
+					"kotlin-scripting", // => org.jetbrains.kotlin.plugin.scripting
+					// Removed in 1.7.0 https://youtrack.jetbrains.com/issue/KT-48276.
+					"kotlin2js",
+					// Removed in 1.7.0 https://youtrack.jetbrains.com/issue/KT-48276.
+					"kotlin-dce-js",
+				],
+				versioning: "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
+				separateMajorMinor: true,
+				separateMultipleMajor: true,
+				separateMinorPatch: true
+			},
+			{
+				groupName: "Kotlin",
+				description: "Group together all dependencies and plugins from Kotlin, Dokka and KotlinX, including coroutines.",
 				matchSourceUrls: [
 					"https://github.com/JetBrains/kotlin",
 				],
@@ -126,13 +148,16 @@
 				separateMinorPatch: true,
 			},
 			{
+				// This is now obsolete, because of https://android-developers.googleblog.com/2024/04/jetpack-compose-compiler-moving-to-kotlin-repository.html
 				groupName: "Kotlin",
 				description: "Group together all dependencies from KSP into Kotlin. This is required because KSP depends on Kotlin internals.",
 				matchPackagePrefixes: [
 					"com.google.devtools.ksp:",
 				],
-				matchPackageNames: [
+				matchDepNames: [
 					"com.google.devtools.ksp",
+				],
+				matchPackageNames: [
 					"com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin",
 				],
 				versioning: "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)(?<patch>\\d)?(?<prerelease>-(?:RC|Beta)\\d*)?-(?<build>\\d+\\.\\d+\\.\\d+)$",
@@ -161,8 +186,10 @@
 				matchPackagePrefixes: [
 					"io.gitlab.arturbosch.detekt:",
 				],
-				matchPackageNames: [
+				matchDepNames: [
 					"io.gitlab.arturbosch.detekt",
+				],
+				matchPackageNames: [
 					"io.gitlab.arturbosch.detekt:detekt-gradle-plugin",
 					"io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin",
 				],
@@ -230,12 +257,11 @@
 			},
 			{
 				// Note: this is a separate rule, because of the too generic un-prefixed dep names.
-				// Combining with a sourceUrl matcher to restrict the scope.
+				// Combining with manager and sourceUrl matchers to restrict the scope.
 				groupName: "Android Gradle Plugin",
 				description: "Group together all dependencies and plugin aliases from AGP.",
-				sourceUrls: [
-					"https://android.googlesource.com/platform/tools/base",
-				],
+				matchManagers: ["gradle"],
+				sourceUrls: ["https://android.googlesource.com/platform/tools/base"],
 				matchDepNames: [
 					"android", // => com.android.application
 					"android-library", // => com.android.library
