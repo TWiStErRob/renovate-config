@@ -22,7 +22,7 @@
 		packageRules: [
 			{
 				matchManagers: ["github-actions"],
-				matchDepNames: ["gradle/gradle-build-action"],
+				matchPackageNames: ["gradle/gradle-build-action"],
 				replacementName: "gradle/actions/setup-gradle",
 				replacementVersion: "3.0.0",
 			},
@@ -91,7 +91,7 @@
 		packageRules: [
 			{
 				matchDatasources: ["maven"],
-				matchDepNames: ["com.gradle.enterprise:com.gradle.enterprise.gradle.plugin"],
+				matchPackageNames: ["com.gradle.enterprise:com.gradle.enterprise.gradle.plugin"],
 				replacementName: "com.gradle.develocity:com.gradle.develocity.gradle.plugin",
 				replacementVersion: "3.17",
 			},
