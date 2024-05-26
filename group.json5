@@ -19,6 +19,7 @@
 			"local>TWiStErRob/renovate-config:group.json5/jackson",
 			"local>TWiStErRob/renovate-config:group.json5/retrofit1",
 			"local>TWiStErRob/renovate-config:group.json5/retrofit2",
+			"local>TWiStErRob/renovate-config:group.json5/okio",
 			"local>TWiStErRob/renovate-config:group.json5/notion",
 			"local>TWiStErRob/renovate-config:group.json5/mkdocs",
 		],
@@ -341,6 +342,24 @@
 			},
 			// Cannot have matchSourceUrls: [ "https://github.com/square/retrofit" ],
 			// because different versions existed in the same repository.
+		],
+	},
+	"okio": {
+		packageRules: [
+			{
+				groupName: "Okio monorepo",
+				description: "Group together all dependencies of Okio.",
+				matchPackagePrefixes: [
+					"com.squareup.okio:",
+				],
+			},
+			{
+				groupName: "Okio monorepo",
+				description: "Group together all dependencies of Okio.",
+				matchSourceUrls: [
+					"https://github.com/square/okio",
+				],
+			}
 		],
 	},
 	"notion": {
