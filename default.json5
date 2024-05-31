@@ -46,6 +46,11 @@
 			minimumReleaseAge: "3 days",
 		},
 		{
+			description: "Wait for Ruby upgrades, ruby/setup-ruby action keeps lagging behind and upgrades just fail.",
+			matchDepNames: ["ruby"],
+			minimumReleaseAge: "7 days",
+		},
+		{
 			description: "Merge my packages as soon as possible.",
 			matchPackagePrefixes: [
 				"TWiStErRob/",
