@@ -261,7 +261,7 @@
 				groupName: "Android Gradle Plugin",
 				description: "Group together all dependencies and plugin aliases from AGP.",
 				matchManagers: ["gradle"],
-				sourceUrls: ["https://android.googlesource.com/platform/tools/base"],
+				matchSourceUrls: ["https://android.googlesource.com/platform/tools/base"],
 				matchDepNames: [
 					"android", // => com.android.application
 					"android-library", // => com.android.library
