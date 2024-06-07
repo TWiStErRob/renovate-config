@@ -97,8 +97,6 @@
 					// New in 2.0.0 @ org.jetbrains.kotlin:compose-compiler-gradle-plugin.
 					"org.jetbrains.kotlin.plugin.compose",
 				],
-				// See https://github.com/renovatebot/renovate/discussions/14919 and https://regex101.com/r/XTbJ6B/1.
-				versioning: "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
 				separateMajorMinor: true,
 				separateMultipleMajor: true,
 				separateMinorPatch: true,
@@ -131,7 +129,6 @@
 					// Removed in 1.7.0 https://youtrack.jetbrains.com/issue/KT-48276.
 					"kotlin-dce-js",
 				],
-				versioning: "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
 				separateMajorMinor: true,
 				separateMultipleMajor: true,
 				separateMinorPatch: true
@@ -142,7 +139,6 @@
 				matchSourceUrls: [
 					"https://github.com/JetBrains/kotlin",
 				],
-				versioning: "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)-?(?<patch>\\d)?(?<prerelease>(?:-(?:RC\\d*|M\\d+))?(?:-(?:rc|beta|dev|release|space))?(?:-(?<build>\\d+(?:-\\d+)?))?)?$",
 				separateMajorMinor: true,
 				separateMultipleMajor: true,
 				separateMinorPatch: true,
@@ -160,7 +156,6 @@
 				matchPackageNames: [
 					"com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin",
 				],
-				versioning: "regex:^1\\.(?<major>\\d+)\\.(?<minor>\\d)(?<patch>\\d)?(?<prerelease>-(?:RC|Beta)\\d*)?-(?<build>\\d+\\.\\d+\\.\\d+)$",
 				separateMajorMinor: true,
 				separateMultipleMajor: true,
 				separateMinorPatch: true,
