@@ -51,6 +51,15 @@
 			minimumReleaseAge: "7 days",
 		},
 		{
+			// Example failure: https://github.com/TWiStErRob/net.twisterrob.ghlint/actions/runs/9427213452/job/25971052478?pr=315
+			// > Version 3.12.4 was not found in the local cache
+			// > Error: The version '3.12.4' with architecture 'x64' was not found for Ubuntu 22.04.
+			// > The list of all available versions can be found here: https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json
+			description: "Wait for Pyhton upgrades, actions/setup-python action keeps lagging behind and upgrades just fail. Example: https://github.com/actions/setup-python/issues/883",
+			matchDepNames: ["python"],
+			minimumReleaseAge: "7 days",
+		},
+		{
 			description: "Merge my packages as soon as possible.",
 			matchPackagePrefixes: [
 				"TWiStErRob/",
