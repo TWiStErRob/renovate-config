@@ -3,18 +3,18 @@
 	"all": {
 		extends: [
 			// DISABLED https://github.com/renovatebot/renovate/discussions/27107
-			//"local>TWiStErRob/renovate-config:replacement.json5/gradle-build-action-to-setup-gradle",
+			//"github>TWiStErRob/renovate-config:replacement.json5/gradle-build-action-to-setup-gradle",
 
 			// DISABLED https://github.com/renovatebot/renovate/discussions/24883#discussioncomment-8388613
 			// > WARN: gradle manager does not support replacement updates yet
-			//"local>TWiStErRob/renovate-config:replacement.json5/jcenter-flexbox-to-gmaven-flexbox",
-			//"local>TWiStErRob/renovate-config:replacement.json5/nhaarman-mockito-kotlin-v1-to-v2",
-			//"local>TWiStErRob/renovate-config:replacement.json5/nhaarman-mockitokotlin2-to-mockito-kotlin",
-			//"local>TWiStErRob/renovate-config:replacement.json5/gmazzo-gradle-buildconfig-plugin-v3-to-v4",
-			//"local>TWiStErRob/renovate-config:replacement.json5/gradle-enterprise-develocity-plugin",
-			//"local>TWiStErRob/renovate-config:replacement.json5/gradle-enterprise-develocity-plugin-marker",
-			//"local>TWiStErRob/renovate-config:replacement.json5/squareup-retrofit-v1-to-v2",
-			//"local>TWiStErRob/renovate-config:replacement.json5/squareup-okhttp-v2-to-v3",
+			//"github>TWiStErRob/renovate-config:replacement.json5/jcenter-flexbox-to-gmaven-flexbox",
+			//"github>TWiStErRob/renovate-config:replacement.json5/nhaarman-mockito-kotlin-v1-to-v2",
+			//"github>TWiStErRob/renovate-config:replacement.json5/nhaarman-mockitokotlin2-to-mockito-kotlin",
+			//"github>TWiStErRob/renovate-config:replacement.json5/gmazzo-gradle-buildconfig-plugin-v3-to-v4",
+			//"github>TWiStErRob/renovate-config:replacement.json5/gradle-enterprise-develocity-plugin",
+			//"github>TWiStErRob/renovate-config:replacement.json5/gradle-enterprise-develocity-plugin-marker",
+			//"github>TWiStErRob/renovate-config:replacement.json5/squareup-retrofit-v1-to-v2",
+			//"github>TWiStErRob/renovate-config:replacement.json5/squareup-okhttp-v2-to-v3",
 		],
 	},
 	"gradle-build-action-to-setup-gradle": {
