@@ -1,6 +1,6 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [
-		"local>TWiStErRob/renovate-config:default.json5"
+		"github>TWiStErRob/renovate-config:default.json5"
 	]
 }
