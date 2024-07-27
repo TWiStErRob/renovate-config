@@ -61,9 +61,9 @@
 		},
 		{
 			description: "Merge my packages as soon as possible.",
-			matchPackagePrefixes: [
-				"TWiStErRob/",
-				"net.twisterrob",
+			matchPackageNames: [
+				"TWiStErRob/*",
+				"net.twisterrob.*",
 			],
 			minimumReleaseAge: "0 minutes",
 		},
