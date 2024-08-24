@@ -270,8 +270,8 @@
 			{
 				groupName: "Jackson monorepo",
 				description: "Group together all dependencies of Jackson.",
-				matchSourceUrlPrefixes: [
-					"https://github.com/FasterXML/jackson-",
+				matchSourceUrls: [
+					"https://github.com/FasterXML/jackson-*",
 				],
 			},
 			{
