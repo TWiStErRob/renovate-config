@@ -77,6 +77,13 @@
 					"org.jetbrains.kotlin.*:org.jetbrains.kotlin.*.gradle.plugin",
 					"org.jetbrains.kotlin:kotlin-gradle-plugin",
 				],
+				separateMajorMinor: true,
+				separateMultipleMajor: true,
+				separateMinorPatch: true,
+			},
+			{
+				groupName: "Kotlin",
+				description: "Group together all dependencies and plugins from Kotlin, Dokka and KotlinX, including coroutines.",
 				matchDepNames: [
 					"org.jetbrains.kotlin.android",
 					"org.jetbrains.kotlin.android.extensions",
@@ -148,6 +155,14 @@
 				matchDepNames: [
 					"com.google.devtools.ksp",
 				],
+				separateMajorMinor: true,
+				separateMultipleMajor: true,
+				separateMinorPatch: true,
+			},
+			{
+				// This is now obsolete, because of https://android-developers.googleblog.com/2024/04/jetpack-compose-compiler-moving-to-kotlin-repository.html
+				groupName: "Kotlin",
+				description: "Group together all dependencies from KSP into Kotlin. This is required because KSP depends on Kotlin internals.",
 				matchPackageNames: [
 					"com.google.devtools.ksp:*",
 					"com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin",
@@ -177,6 +192,10 @@
 				matchDepNames: [
 					"io.gitlab.arturbosch.detekt",
 				],
+			},
+			{
+				groupName: "Detekt monorepo",
+				description: "Group together all dependencies of Detekt.",
 				matchPackageNames: [
 					"io.gitlab.arturbosch.detekt:*",
 					"io.gitlab.arturbosch.detekt:detekt-gradle-plugin",
@@ -218,6 +237,13 @@
 					"com.android.reporting",
 					"com.android.test",
 				],
+				separateMajorMinor: true,
+				separateMultipleMajor: true,
+				separateMinorPatch: true,
+			},
+			{
+				groupName: "Android Gradle Plugin",
+				description: "Group together all dependencies and plugin aliases from AGP.",
 				matchPackageNames: [
 					// This is the main entry point, so listing it for documentation.
 					"com.android.tools.build:gradle",
