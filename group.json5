@@ -1,32 +1,5 @@
 {
 	$schema: "https://docs.renovatebot.com/renovate-schema.json",
-	"all": {
-		extends: [
-			"group:monorepos",
-			"group:recommended",
-			"github>TWiStErRob/renovate-config:group.json5/twisterrob-gradle",
-			"github>TWiStErRob/renovate-config:group.json5/github-artifacts",
-			"github>TWiStErRob/renovate-config:group.json5/github-pages",
-			"github>TWiStErRob/renovate-config:group.json5/kotlin",
-			"github>TWiStErRob/renovate-config:group.json5/ktor",
-			"github>TWiStErRob/renovate-config:group.json5/detekt",
-			"github>TWiStErRob/renovate-config:group.json5/agp",
-			"github>TWiStErRob/renovate-config:group.json5/androidx",
-			"github>TWiStErRob/renovate-config:group.json5/androidx-test",
-			"github>TWiStErRob/renovate-config:group.json5/mockito",
-			"github>TWiStErRob/renovate-config:group.json5/neo4j",
-			"github>TWiStErRob/renovate-config:group.json5/log4j2",
-			"github>TWiStErRob/renovate-config:group.json5/jackson",
-			"github>TWiStErRob/renovate-config:group.json5/retrofit1",
-			"github>TWiStErRob/renovate-config:group.json5/retrofit2",
-			"github>TWiStErRob/renovate-config:group.json5/okhttp1_2",
-			"github>TWiStErRob/renovate-config:group.json5/okhttp3",
-			"github>TWiStErRob/renovate-config:group.json5/okio",
-			"github>TWiStErRob/renovate-config:group.json5/notion",
-			"github>TWiStErRob/renovate-config:group.json5/mkdocs",
-		],
-	},
-	"twisterrob-gradle": {
 		packageRules: [
 			{
 				groupName: "TWiStErRob Gradle",
@@ -36,10 +9,6 @@
 					"net.twisterrob.gradle.plugin.",
 				],
 			},
-		],
-	},
-	"github-artifacts": {
-		packageRules: [
 			{
 				groupName: "actions/upload-artifact and actions/download-artifact",
 				description: "Artifact management is coupled in GitHub Actions. https://github.blog/changelog/2023-12-14-github-actions-artifacts-v4-is-now-generally-available/",
@@ -50,10 +19,6 @@
 				],
 				separateMultipleMajor: false,
 			},
-		],
-	},
-	"github-pages": {
-		packageRules: [
 			{
 				groupName: "actions/github-pages",
 				description: "GitHub Pages actions are coupled in GitHub Actions.",
@@ -65,10 +30,6 @@
 				],
 				separateMultipleMajor: false,
 			},
-		],
-	},
-	"kotlin": {
-		packageRules: [
 			{
 				groupName: "Kotlin",
 				description: "Group together all dependencies and plugins from Kotlin, Dokka and KotlinX, including coroutines.",
@@ -160,10 +121,6 @@
 				separateMultipleMajor: true,
 				separateMinorPatch: true,
 			},
-		],
-	},
-	"ktor": {
-		packageRules: [
 			{
 				groupName: "ktor.io monorepo",
 				description: "Group together all dependencies of ktor.",
@@ -171,10 +128,6 @@
 					"https://github.com/ktorio/ktor",
 				],
 			},
-		],
-	},
-	"detekt": {
-		packageRules: [
 			{
 				groupName: "Detekt monorepo",
 				description: "Group together all dependencies of Detekt.",
@@ -196,10 +149,6 @@
 					"https://github.com/detekt/detekt",
 				],
 			},
-		],
-	},
-	"agp": {
-		packageRules: [
 			{
 				groupName: "Android Gradle Plugin",
 				description: "Group together all dependencies and plugin aliases from AGP.",
@@ -266,10 +215,6 @@
 				separateMultipleMajor: true,
 				separateMinorPatch: true,
 			},
-		],
-	},
-	"androidx": {
-		packageRules: [
 			{
 				groupName: "AndroidX Monorepo",
 				description: "Group together all dependencies from AndroidX.",
@@ -277,10 +222,6 @@
 					"androidx.",
 				],
 			},
-		],
-	},
-	"androidx-test": {
-		packageRules: [
 			{
 				groupName: "AndroidX Test Monorepo",
 				description: "Group together all dependencies from AndroidX Test (Espresso).",
@@ -289,10 +230,6 @@
 					"androidx.test.espresso:",
 				],
 			},
-		],
-	},
-	"mockito": {
-		packageRules: [
 			{
 				groupName: "mockito monorepo",
 				description: "Add nhaarman dependency to builtin 'mockito monorepo' group.",
@@ -302,10 +239,6 @@
 					"com.nhaarman:mockito-kotlin",
 				],
 			},
-		],
-	},
-	"neo4j": {
-		packageRules: [
 			{
 				groupName: "Neo4J monorepo",
 				description: "Group together all dependencies from Neo4J and OGM",
@@ -328,10 +261,6 @@
 				separateMultipleMajor: true,
 				separateMinorPatch: true,
 			},
-		],
-	},
-	"log4j2": {
-		packageRules: [
 			{
 				groupName: "Log4j 2 monorepo",
 				description: "Group together all dependencies from Log4J 2",
@@ -339,10 +268,6 @@
 					"org.apache.logging.log4j:",
 				],
 			},
-		],
-	},
-	"jackson": {
-		packageRules: [
 			{
 				groupName: "Jackson monorepo",
 				description: "Group together all dependencies of Jackson.",
@@ -357,10 +282,6 @@
 					"https://github.com/FasterXML/jackson-",
 				],
 			},
-		],
-	},
-	"retrofit1": {
-		packageRules: [
 			{
 				groupName: "Retrofit monorepo",
 				description: "Group together all dependencies of Retrofit 1.x.",
@@ -378,10 +299,6 @@
 			},
 			// Cannot have matchSourceUrls: [ "https://github.com/square/retrofit" ],
 			// because different versions existed in the same repository.
-		],
-	},
-	"retrofit2": {
-		packageRules: [
 			{
 				groupName: "Retrofit 2 monorepo",
 				description: "Group together all dependencies of Retrofit 2.x.",
@@ -391,10 +308,6 @@
 			},
 			// Cannot have matchSourceUrls: [ "https://github.com/square/retrofit" ],
 			// because different versions existed in the same repository.
-		],
-	},
-	"okhttp1_2": {
-		packageRules: [
 			{
 				groupName: "OkHttp monorepo",
 				description: "Group together all dependencies of OkHttp.",
@@ -404,10 +317,6 @@
 			},
 			// Cannot have matchSourceUrls: [ "https://github.com/square/okhttp" ],
 			// because different versions existed in the same repository.
-		],
-	},
-	"okhttp3": {
-		packageRules: [
 			{
 				// OkHttp 3 4.x exists, this is because it's functionally equivalent.
 				// Major change only exists to signify binary-compatible full Kotlin rewrite.
@@ -419,10 +328,6 @@
 			},
 			// Cannot have matchSourceUrls: [ "https://github.com/square/okhttp" ],
 			// because different versions existed in the same repository.
-		],
-	},
-	"okio": {
-		packageRules: [
 			{
 				groupName: "Okio monorepo",
 				description: "Group together all dependencies of Okio.",
@@ -437,10 +342,6 @@
 					"https://github.com/square/okio",
 				],
 			},
-		],
-	},
-	"notion": {
-		packageRules: [
 			{
 				groupName: "Notion SDK JVM",
 				description: "Group together all dependencies of Seratch's Notion SDK.",
@@ -455,10 +356,6 @@
 					"https://github.com/seratch/notion-sdk-jvm",
 				],
 			},
-		],
-	},
-	"mkdocs": {
-		packageRules: [
 			{
 				groupName: "mkdocs",
 				description: "Group together coupled dependencies of mkdocs. They use semver, but require a specific minor version (mkdocs 1.6.0) in a patch release (mkdocs-material 9.5.19).",
@@ -471,5 +368,4 @@
 				separateMultipleMajor: false,
 			},
 		],
-	},
 }
