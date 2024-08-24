@@ -33,11 +33,9 @@
 			{
 				groupName: "Kotlin",
 				description: "Group together all dependencies and plugins from Kotlin, Dokka and KotlinX, including coroutines.",
-				matchPackagePatterns: [
-					"^org\\.jetbrains\\.kotlin:kotlin-.*$",
-					"^org\\.jetbrains\\.kotlin\\.(.+):org\\.jetbrains\\.kotlin\\.(\\$1)\\.gradle\\.plugin$",
-				],
 				matchPackageNames: [
+					"org.jetbrains.kotlin:kotlin-*",
+					"org.jetbrains.kotlin.*:org.jetbrains.kotlin.*.gradle.plugin",
 					"org.jetbrains.kotlin:kotlin-gradle-plugin",
 				],
 				matchDepNames: [
@@ -236,10 +234,10 @@
 			{
 				groupName: "Neo4J monorepo",
 				description: "Group together all dependencies from Neo4J and OGM",
-				matchPackagePatterns: [
-					"^org\\.neo4j:neo4j$",
-					"^org\\.neo4j:neo4j-ogm-.+$",
-					"^org\\.neo4j\\..+:neo4j-.+$",
+				matchPackageNames: [
+					"org.neo4j:neo4j",
+					"org.neo4j:neo4j-ogm-*",
+					"org.neo4j.*:neo4j-*",
 				],
 				separateMajorMinor: true,
 				separateMultipleMajor: true,
