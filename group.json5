@@ -4,9 +4,9 @@
 			{
 				groupName: "TWiStErRob Gradle",
 				description: "Group together all dependencies from the net.twisterrob.gradle monorepo.",
-				matchPackagePrefixes: [
-					"net.twisterrob.gradle:",
-					"net.twisterrob.gradle.plugin.",
+				matchPackageNames: [
+					"net.twisterrob.gradle:*",
+					"net.twisterrob.gradle.plugin.*",
 				],
 			},
 			{
@@ -108,13 +108,11 @@
 				// This is now obsolete, because of https://android-developers.googleblog.com/2024/04/jetpack-compose-compiler-moving-to-kotlin-repository.html
 				groupName: "Kotlin",
 				description: "Group together all dependencies from KSP into Kotlin. This is required because KSP depends on Kotlin internals.",
-				matchPackagePrefixes: [
-					"com.google.devtools.ksp:",
-				],
 				matchDepNames: [
 					"com.google.devtools.ksp",
 				],
 				matchPackageNames: [
+					"com.google.devtools.ksp:*",
 					"com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin",
 				],
 				separateMajorMinor: true,
@@ -131,13 +129,11 @@
 			{
 				groupName: "Detekt monorepo",
 				description: "Group together all dependencies of Detekt.",
-				matchPackagePrefixes: [
-					"io.gitlab.arturbosch.detekt:",
-				],
 				matchDepNames: [
 					"io.gitlab.arturbosch.detekt",
 				],
 				matchPackageNames: [
+					"io.gitlab.arturbosch.detekt:*",
 					"io.gitlab.arturbosch.detekt:detekt-gradle-plugin",
 					"io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin",
 				],
@@ -152,10 +148,6 @@
 			{
 				groupName: "Android Gradle Plugin",
 				description: "Group together all dependencies and plugin aliases from AGP.",
-				matchPackageNames: [
-					// This is the main entry point, so listing it for documentation.
-					"com.android.tools.build:gradle",
-				],
 				matchDepNames: [
 					"com.android.application",
 					"com.android.asset-pack",
@@ -177,23 +169,25 @@
 					"com.android.reporting",
 					"com.android.test",
 				],
-				matchPackagePrefixes: [
+				matchPackageNames: [
+					// This is the main entry point, so listing it for documentation.
+					"com.android.tools.build:gradle",
 					// There's a lot, see https://maven.google.com/web/index.html?q=com.android.tools .
 					// Manually removed the ones that don't have the Build Tools monorepo versioning.
-					"com.android.tools:",
-					"com.android.tools.build:",
-					"com.android.tools.lint:",
-					"com.android.tools.analytics-library:",
-					"com.android.tools.apkparser:",
-					"com.android.tools.chunkio:",
-					"com.android.tools.ddms:",
-					"com.android.tools.emulator:",
-					"com.android.tools.external.com-intellij:",
-					"com.android.tools.external.org-jetbrains:",
-					"com.android.tools.fakeadbserver:",
+					"com.android.tools:*",
+					"com.android.tools.build:*",
+					"com.android.tools.lint:*",
+					"com.android.tools.analytics-library:*",
+					"com.android.tools.apkparser:*",
+					"com.android.tools.chunkio:*",
+					"com.android.tools.ddms:*",
+					"com.android.tools.emulator:*",
+					"com.android.tools.external.com-intellij:*",
+					"com.android.tools.external.org-jetbrains:*",
+					"com.android.tools.fakeadbserver:*",
 					"com.android.tools.layoutlib:layoutlib-api",
-					"com.android.tools.pixelprobe:",
-					"com.android.tools.utp:",
+					"com.android.tools.pixelprobe:*",
+					"com.android.tools.utp:*",
 				],
 				separateMajorMinor: true,
 				separateMultipleMajor: true,
@@ -218,16 +212,16 @@
 			{
 				groupName: "AndroidX Monorepo",
 				description: "Group together all dependencies from AndroidX.",
-				matchPackagePrefixes: [
-					"androidx.",
+				matchPackageNames: [
+					"androidx.*",
 				],
 			},
 			{
 				groupName: "AndroidX Test Monorepo",
 				description: "Group together all dependencies from AndroidX Test (Espresso).",
-				matchPackagePrefixes: [
-					"androidx.test:",
-					"androidx.test.espresso:",
+				matchPackageNames: [
+					"androidx.test:*",
+					"androidx.test.espresso:*",
 				],
 			},
 			{
@@ -264,15 +258,15 @@
 			{
 				groupName: "Log4j 2 monorepo",
 				description: "Group together all dependencies from Log4J 2",
-				matchPackagePrefixes: [
-					"org.apache.logging.log4j:",
+				matchPackageNames: [
+					"org.apache.logging.log4j:*",
 				],
 			},
 			{
 				groupName: "Jackson monorepo",
 				description: "Group together all dependencies of Jackson.",
-				matchPackagePrefixes: [
-					"com.fasterxml.jackson.",
+				matchPackageNames: [
+					"com.fasterxml.jackson.*",
 				],
 			},
 			{
@@ -285,14 +279,14 @@
 			{
 				groupName: "Retrofit monorepo",
 				description: "Group together all dependencies of Retrofit 1.x.",
-				matchPackagePrefixes: [
-					"com.squareup.retrofit:",
+				matchPackageNames: [
+					"com.squareup.retrofit:*",
 				],
 			},
 			{
 				description: "Disable updating the Retrofit 1.x packages to 2.x, the package has been relocated for v2.",
-				matchPackagePrefixes: [
-					"com.squareup.retrofit:",
+				matchPackageNames: [
+					"com.squareup.retrofit:*",
 				],
 				"matchNewValue": "2.*",
 				"enabled": false,
@@ -302,8 +296,8 @@
 			{
 				groupName: "Retrofit 2 monorepo",
 				description: "Group together all dependencies of Retrofit 2.x.",
-				matchPackagePrefixes: [
-					"com.squareup.retrofit2:",
+				matchPackageNames: [
+					"com.squareup.retrofit2:*",
 				],
 			},
 			// Cannot have matchSourceUrls: [ "https://github.com/square/retrofit" ],
@@ -311,8 +305,8 @@
 			{
 				groupName: "OkHttp monorepo",
 				description: "Group together all dependencies of OkHttp.",
-				matchPackagePrefixes: [
-					"com.squareup.okhttp:",
+				matchPackageNames: [
+					"com.squareup.okhttp:*",
 				],
 			},
 			// Cannot have matchSourceUrls: [ "https://github.com/square/okhttp" ],
@@ -322,8 +316,8 @@
 				// Major change only exists to signify binary-compatible full Kotlin rewrite.
 				groupName: "OkHttp 3 monorepo",
 				description: "Group together all dependencies of OkHttp 3.",
-				matchPackagePrefixes: [
-					"com.squareup.okhttp3:",
+				matchPackageNames: [
+					"com.squareup.okhttp3:*",
 				],
 			},
 			// Cannot have matchSourceUrls: [ "https://github.com/square/okhttp" ],
@@ -331,8 +325,8 @@
 			{
 				groupName: "Okio monorepo",
 				description: "Group together all dependencies of Okio.",
-				matchPackagePrefixes: [
-					"com.squareup.okio:",
+				matchPackageNames: [
+					"com.squareup.okio:*",
 				],
 			},
 			{
@@ -345,8 +339,8 @@
 			{
 				groupName: "Notion SDK JVM",
 				description: "Group together all dependencies of Seratch's Notion SDK.",
-				matchPackagePrefixes: [
-					"com.github.seratch:notion-sdk-jvm-",
+				matchPackageNames: [
+					"com.github.seratch:notion-sdk-jvm-*",
 				],
 			},
 			{
