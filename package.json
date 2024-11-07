@@ -5,7 +5,7 @@
 	},
 	"devDependencies": {
 		"json5": "2.2.3",
-		"renovate": "38.4.0"
+		"renovate": "39.0.0"
 	},
 	"jshintConfig": {
 		"esversion": 9
