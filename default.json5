@@ -89,7 +89,7 @@
 				"(^|\\/)action\\.[Yy][Aa]?[Mm][Ll]$",
 			],
 			matchStrings: [
-				"runs-on:\\s+(?<depName>ubuntu|macos|windows)-(?<currentValue>.+)",
+				"runs-on:\\s*['\"]?(?<depName>ubuntu)-(?<currentValue>.+)['\"]?",
 			],
 			datasourceTemplate: "github-runners",
 			versioningTemplate: "docker",
