@@ -80,4 +80,21 @@
 		description: "Update Gradle wrapper to non-stable versions",
 		ignoreUnstable: false,
 	},
+	customManagers: [
+		{
+			customType: "regex",
+			description: "GitHub Actions latest runners",
+			fileMatch: [
+				"^(workflow-templates|\\.github\\/workflows)\\/[^/]+\\.[Yy][Aa]?[Mm][Ll]$",
+				"(^|\\/)action\\.[Yy][Aa]?[Mm][Ll]$",
+			],
+			matchStrings: [
+				"runs-on:\\s+(?<depName>ubuntu|macos|windows)-(?<currentValue>.+)",
+			],
+			datasourceTemplate: "github-runners",
+			versioningTemplate: "docker",
+			currentValueTemplate: "{{#if (equals currentValue 'latest')}}22.04{{else}}{{{currentValue}}}{{/if}}",
+			autoReplaceStringTemplate: "runs-on: {{{depName}}}-{{{newValue}}}",
+		},
+	]
 }
