@@ -32,6 +32,7 @@
 			matchCurrentVersion: "/^0/",
 			matchPackageNames: [
 				"org.gradle.toolchains.foojay-resolver-convention:org.gradle.toolchains.foojay-resolver-convention.gradle.plugin",
+				"org.jetbrains.kotlinx:kotlinx-html-jvm",
 			],
 			automerge: true,
 		},
