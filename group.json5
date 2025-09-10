@@ -9,6 +9,7 @@
 			"github>TWiStErRob/renovate-config:group.json5/github-pages",
 			"github>TWiStErRob/renovate-config:group.json5/kotlin",
 			"github>TWiStErRob/renovate-config:group.json5/ktor",
+			"github>TWiStErRob/renovate-config:group.json5/intellij-plugin",
 			"github>TWiStErRob/renovate-config:group.json5/detekt",
 			"github>TWiStErRob/renovate-config:group.json5/agp",
 			"github>TWiStErRob/renovate-config:group.json5/androidx",
@@ -180,6 +181,25 @@
 				description: "Group together all dependencies of ktor.",
 				matchSourceUrls: [
 					"https://github.com/ktorio/ktor",
+				],
+			},
+		],
+	},
+	"intellij-plugin": {
+		packageRules: [
+			{
+				groupName: "intellij-platform-gradle-plugin monorepo",
+				description: "Group together all dependencies of intellij-platform-gradle-plugin.",
+				matchDepNames: [
+					"org.jetbrains.intellij.platform",
+					"org.jetbrains.intellij.platform.settings",
+				],
+			},
+			{
+				groupName: "intellij-platform-gradle-plugin monorepo",
+				description: "Group together all dependencies of intellij-platform-gradle-plugin.",
+				matchSourceUrls: [
+					"https://github.com/JetBrains/intellij-platform-gradle-plugin",
 				],
 			},
 		],
