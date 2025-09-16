@@ -76,6 +76,13 @@
 			],
 			pinDigests: true,
 		},
+		{
+			description: "Disable Gradle wrapper milestone releases, only interested stables and RCs for now.",
+			matchPackageNames: [
+				"gradle",
+			],
+			allowedVersions: "!/-milestone-\\d+$/",
+		},
 	],
 	"gradle-wrapper": {
 		description: "Update Gradle wrapper to non-stable versions",
