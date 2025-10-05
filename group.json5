@@ -211,6 +211,7 @@
 				description: "Group together all dependencies of Detekt.",
 				matchDepNames: [
 					"io.gitlab.arturbosch.detekt",
+                    "dev.detekt",
 				],
 			},
 			{
@@ -220,6 +221,7 @@
 					"io.gitlab.arturbosch.detekt:*",
 					"io.gitlab.arturbosch.detekt:detekt-gradle-plugin",
 					"io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin",
+                    "dev.detekt:*",
 				],
 			},
 			{
