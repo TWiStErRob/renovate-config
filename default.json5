@@ -21,8 +21,8 @@
 	],
 	packageRules: [
 		{
-			description: "Auto-merge all small changes, except for unstable versions.",
-			matchUpdateTypes: ["minor", "patch"],
+			description: "Auto-merge all changes, except for unstable versions.",
+			matchUpdateTypes: ["major", "minor", "patch"],
 			matchCurrentVersion: "!/^0/",
 			automerge: true,
 		},
