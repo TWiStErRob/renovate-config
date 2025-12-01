@@ -83,6 +83,24 @@
 			],
 			allowedVersions: "!/-milestone-\\d+$/",
 		},
+		{
+			"description": "Link to Compose Screenshot Testing release notes (dependencies).",
+			"matchPackageNames": [
+				"com.android.tools.screenshot:*",
+			],
+			"prBodyNotes": [
+				"Release notes: https://developer.android.com/studio/preview/compose-screenshot-testing#release-updates",
+			],
+		},
+		{
+			"description": "Link to Compose Screenshot Testing release notes (Gradle plugin).",
+			"matchDepNames": [
+				"com.android.compose.screenshot",
+			],
+			"prBodyNotes": [
+				"Release notes: https://developer.android.com/studio/preview/compose-screenshot-testing#release-updates",
+			],
+		},
 	],
 	"gradle-wrapper": {
 		description: "Update Gradle wrapper to non-stable versions",
