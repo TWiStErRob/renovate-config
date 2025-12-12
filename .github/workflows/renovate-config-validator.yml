@@ -32,7 +32,7 @@ jobs:
     steps:
 
       - name: "Cache NPX."
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           key: npx-${{ github.workflow }}-${{ github.job }}
           path: |
@@ -81,7 +81,7 @@ jobs:
     steps:
 
       - name: "Cache NPX."
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           key: npx-${{ github.workflow }}-${{ github.job }}
           path: |
