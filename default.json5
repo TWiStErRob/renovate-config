@@ -77,6 +77,13 @@
 			pinDigests: true,
 		},
 		{
+			description: "Disable AGP major updates from 8 to 9 until detekt supports AGP 9.",
+			matchSourceUrls: ["https://android.googlesource.com/platform/tools/base"],
+			matchUpdateTypes: ["major"],
+			matchNewValue: "/^9\\./",
+			enabled: false,
+		},
+		{
 			description: "Disable Gradle wrapper milestone releases, only interested stables and RCs for now.",
 			matchPackageNames: [
 				"gradle",

@@ -306,13 +306,6 @@
 				separateMultipleMajor: true,
 				separateMinorPatch: true,
 			},
-			{
-				description: "Disable AGP major updates from 8 to 9 until detekt supports AGP 9.",
-				matchSourceUrls: ["https://android.googlesource.com/platform/tools/base"],
-				matchCurrentVersion: "/^8\\./",
-				matchNewValue: "/^9\\./",
-				enabled: false,
-			},
 		],
 	},
 	"androidx": {
