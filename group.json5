@@ -330,7 +330,9 @@
 		packageRules: [
 			{
 				groupName: "AndroidX Monorepo",
-				commitMessageTopic: "AndroidX Monorepo",
+				// Do not set this, because sometimes a single dependency is updated,
+				// it's better in that case to explicitly call it out.
+				//commitMessageTopic: "AndroidX Monorepo",
 				description: "Group together all dependencies from AndroidX.",
 				matchPackageNames: [
 					"androidx.*",
