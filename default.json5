@@ -33,6 +33,16 @@
 			matchPackageNames: [
 				"org.gradle.toolchains.foojay-resolver-convention:org.gradle.toolchains.foojay-resolver-convention.gradle.plugin",
 				"org.jetbrains.kotlinx:kotlinx-html-jvm",
+				"org.jetbrains.kotlinx.kover:org.jetbrains.kotlinx.kover.gradle.plugin",
+			],
+			automerge: true,
+		},
+		{
+			description: "Auto-merge all updates of specific dependencies, their 0.x versions are stable and well-controlled.",
+			matchUpdateTypes: ["minor", "patch"],
+			matchCurrentVersion: "/^0/",
+			matchDepNames: [
+				"org.jetbrains.kotlinx.kover",
 			],
 			automerge: true,
 		},
