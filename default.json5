@@ -101,6 +101,13 @@
 			allowedVersions: "!/-milestone-\\d+$/",
 		},
 		{
+			description: "Disable KotlinX DateTime compat releases.",
+			matchPackageNames: [
+				"org.jetbrains.kotlinx:kotlinx-datetime",
+			],
+			allowedVersions: "!/-compat$/",
+		},
+		{
 			"description": "Link to Compose Screenshot Testing release notes (dependencies).",
 			"matchPackageNames": [
 				"com.android.tools.screenshot:*",
