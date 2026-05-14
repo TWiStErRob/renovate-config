@@ -31,7 +31,6 @@
 			matchUpdateTypes: ["minor", "patch"],
 			matchCurrentVersion: "/^0/",
 			matchPackageNames: [
-				"moment-timezone",
 				"org.gradle.toolchains.foojay-resolver-convention:org.gradle.toolchains.foojay-resolver-convention.gradle.plugin",
 				"org.jetbrains.kotlinx:kotlinx-html-jvm",
 				"org.jetbrains.kotlinx.kover:org.jetbrains.kotlinx.kover.gradle.plugin",
@@ -44,6 +43,7 @@
 			matchCurrentVersion: "/^0/",
 			matchDepNames: [
 				"org.jetbrains.kotlinx.kover",
+				"moment-timezone",
 			],
 			automerge: true,
 		},
