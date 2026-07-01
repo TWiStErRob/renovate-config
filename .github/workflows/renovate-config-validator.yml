@@ -83,6 +83,18 @@ jobs:
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
         uses: actions/checkout@v6
 
+      - name: "Set up Node."
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: "Cache NPX."
+        uses: actions/cache@v5
+        with:
+          key: npx-${{ github.workflow }}-${{ github.job }}-${{ hashFiles('package.json') }}
+          path: |
+            ~/.npm/_npx
+
       - name: "Run renovate-config-validator on ${{ env.FILE }}."
         env:
           FILE: ${{ matrix.config-file }}
