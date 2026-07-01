@@ -80,13 +80,6 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
 
-      - name: "Cache NPX."
-        uses: actions/cache@v5
-        with:
-          key: npx-${{ github.workflow }}-${{ github.job }}
-          path: |
-            ~/.npm/_npx
-
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
         uses: actions/checkout@v6
 
@@ -94,11 +87,12 @@ jobs:
         env:
           FILE: ${{ matrix.config-file }}
         shell: bash
-        run: >
-          npx
-          --yes
-          --package renovate
-          --
-          renovate-config-validator
-          --strict
-          "${FILE}"
+        run: |
+          renovateVersion="$(node -p "require('./package.json').devDependencies.renovate")"
+          npx \
+            --yes \
+            --package "renovate@${renovateVersion}" \
+            -- \
+            renovate-config-validator \
+            --strict \
+            "${FILE}"
