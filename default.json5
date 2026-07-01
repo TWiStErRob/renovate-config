@@ -137,9 +137,9 @@
 		{
 			customType: "regex",
 			description: "GitHub Actions latest runners",
-			fileMatch: [
-				"^(workflow-templates|\\.github\\/workflows)\\/[^/]+\\.[Yy][Aa]?[Mm][Ll]$",
-				"(^|\\/)action\\.[Yy][Aa]?[Mm][Ll]$",
+			managerFilePatterns: [
+				"/^(workflow-templates|\\.github\\/workflows)\\/[^/]+\\.[Yy][Aa]?[Mm][Ll]$/",
+				"/(^|\\/)action\\.[Yy][Aa]?[Mm][Ll]$/",
 			],
 			matchStrings: [
 				"runs-on:\\s*['\"]?(?<depName>ubuntu)-(?<currentValue>.+)['\"]?",
