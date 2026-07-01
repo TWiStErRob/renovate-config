@@ -146,7 +146,7 @@
 			],
 			datasourceTemplate: "github-runners",
 			versioningTemplate: "docker",
-			currentValueTemplate: "{{#if (equals currentValue 'latest')}}22.04{{else}}{{{currentValue}}}{{/if}}",
+			currentValueTemplate: "{{#if (equals currentValue 'latest')}}24.04{{else}}{{{currentValue}}}{{/if}}",
 			autoReplaceStringTemplate: "runs-on: {{{depName}}}-{{{newValue}}}",
 		},
 	]
