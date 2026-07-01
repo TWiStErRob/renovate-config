@@ -39,7 +39,7 @@ jobs:
             ~/.npm/_npx
 
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Run json5 validator on ${{ env.FILE }}."
         env:
@@ -90,7 +90,7 @@ jobs:
             ~/.npm/_npx
 
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Set up Node."
         uses: actions/setup-node@v6
