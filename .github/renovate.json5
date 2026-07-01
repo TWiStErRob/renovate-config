@@ -31,8 +31,8 @@
 		{
 			customType: "regex",
 			description: "Renovate version used by CI config validation.",
-			fileMatch: [
-				"^\\.github/workflows/renovate-config-validator\\.yml$",
+			managerFilePatterns: [
+				"/^\\.github/workflows/renovate-config-validator\\.yml$/",
 			],
 			matchStrings: [
 				"RENOVATE_VERSION: '(?<currentValue>.*?)' # Renovated\\.",
