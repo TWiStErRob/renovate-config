@@ -30,6 +30,18 @@
 	customManagers: [
 		{
 			customType: "regex",
+			description: "JSON5 version used by CI config validation.",
+			managerFilePatterns: [
+				"/^\\.github/workflows/renovate-config-validator\\.yml$/",
+			],
+			matchStrings: [
+				"JSON5_VERSION: '(?<currentValue>.*?)' # Renovated\\.",
+			],
+			datasourceTemplate: "npm",
+			depNameTemplate: "json5",
+		},
+		{
+			customType: "regex",
 			description: "Renovate version used by CI config validation.",
 			managerFilePatterns: [
 				"/^\\.github/workflows/renovate-config-validator\\.yml$/",

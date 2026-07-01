@@ -29,17 +29,24 @@ jobs:
       # actions/checkout
       contents: read
     runs-on: ubuntu-24.04
+    env:
+      JSON5_VERSION: '2.2.3' # Renovated.
     steps:
 
       - name: "Cache NPX."
         uses: actions/cache@v6
         with:
-          key: npx-${{ github.workflow }}-${{ github.job }}
+          key: npx-${{ github.workflow }}-${{ github.job }}-${{ env.JSON5_VERSION }}
           path: |
             ~/.npm/_npx
 
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
         uses: actions/checkout@v7
+
+      - name: "Set up Node."
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: package.json
 
       - name: "Run json5 validator on ${{ env.FILE }}."
         env:
@@ -48,6 +55,8 @@ jobs:
         run: >
           npx
           --yes
+          --package "json5@${JSON5_VERSION}"
+          --
           json5
           --validate
           "${FILE}"
