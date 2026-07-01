@@ -32,14 +32,14 @@ jobs:
     steps:
 
       - name: "Cache NPX."
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: npx-${{ github.workflow }}-${{ github.job }}
           path: |
             ~/.npm/_npx
 
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Run json5 validator on ${{ env.FILE }}."
         env:
@@ -83,14 +83,14 @@ jobs:
     steps:
 
       - name: "Cache NPX."
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: npx-${{ github.workflow }}-${{ github.job }}-${{ env.RENOVATE_VERSION }}
           path: |
             ~/.npm/_npx
 
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Set up Node."
         uses: actions/setup-node@v6
