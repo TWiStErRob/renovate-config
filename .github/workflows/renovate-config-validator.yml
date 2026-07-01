@@ -79,7 +79,7 @@ jobs:
       contents: read
     runs-on: ubuntu-24.04
     env:
-      RENOVATE_VERSION: '43.242.2' # Renovated.
+      RENOVATE_VERSION: '43.245.0' # Renovated.
     steps:
 
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
