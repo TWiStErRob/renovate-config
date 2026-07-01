@@ -27,4 +27,18 @@
 			enabled: false,
 		},
 	],
+	customManagers: [
+		{
+			customType: "regex",
+			description: "Renovate version used by CI config validation.",
+			managerFilePatterns: [
+				"/^\\.github/workflows/renovate-config-validator\\.yml$/",
+			],
+			matchStrings: [
+				"RENOVATE_VERSION: '(?<currentValue>.*?)' # Renovated\\.",
+			],
+			datasourceTemplate: "npm",
+			depNameTemplate: "renovate",
+		},
+	],
 }
