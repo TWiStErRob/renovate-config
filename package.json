@@ -7,6 +7,9 @@
 		"json5": "2.2.3",
 		"renovate": "43.4.4"
 	},
+	"engines": {
+		"node": "24"
+	},
 	"jshintConfig": {
 		"esversion": 9
 	}
