@@ -412,18 +412,20 @@
 			{
 				groupName: "Jackson monorepo",
 				commitMessageTopic: "Jackson monorepo",
-				description: "Group together all dependencies of Jackson.",
+				description: "Group together all dependencies of Jackson; wait because FasterXML modules are published unevenly.",
 				matchPackageNames: [
 					"com.fasterxml.jackson.*",
 				],
+				minimumReleaseAge: "3 days",
 			},
 			{
 				groupName: "Jackson monorepo",
 				commitMessageTopic: "Jackson monorepo",
-				description: "Group together all dependencies of Jackson.",
+				description: "Group together all dependencies of Jackson; wait because FasterXML modules are published unevenly.",
 				matchSourceUrls: [
 					"https://github.com/FasterXML/jackson-*",
 				],
+				minimumReleaseAge: "3 days",
 			},
 		],
 	},
