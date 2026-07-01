@@ -16,6 +16,7 @@
 	separateMinorPatch: true,
 	minimumReleaseAge: "8 hours",
 	internalChecksFilter: "strict",
+	rollbackPrs: true,
 	ignorePaths: [
 		"do-not-ignore-anything",
 	],
