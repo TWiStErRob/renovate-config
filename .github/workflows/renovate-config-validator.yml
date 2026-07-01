@@ -82,6 +82,13 @@ jobs:
       RENOVATE_VERSION: '43.245.0' # Renovated.
     steps:
 
+      - name: "Cache NPX."
+        uses: actions/cache@v5
+        with:
+          key: npx-${{ github.workflow }}-${{ github.job }}-${{ env.RENOVATE_VERSION }}
+          path: |
+            ~/.npm/_npx
+
       - name: "Checkout ${{ github.ref }} branch in ${{ github.repository }} repository."
         uses: actions/checkout@v6
 
@@ -89,13 +96,6 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version-file: package.json
-
-      - name: "Cache NPX."
-        uses: actions/cache@v5
-        with:
-          key: npx-${{ github.workflow }}-${{ github.job }}-${{ env.RENOVATE_VERSION }}
-          path: |
-            ~/.npm/_npx
 
       - name: "Run renovate-config-validator on ${{ env.FILE }}."
         env:
