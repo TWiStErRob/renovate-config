@@ -5,7 +5,7 @@
 	},
 	"devDependencies": {
 		"json5": "2.2.3",
-		"renovate": "43.245.0"
+		"renovate": "44.2.1"
 	},
 	"engines": {
 		"node": "24"
