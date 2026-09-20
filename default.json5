@@ -124,7 +124,7 @@
 	],
 	"gradle-wrapper": {
 		description: "Update Gradle wrapper to non-stable versions",
-		ignoreUnstable: true, // TODO revert to false, temp until I clear Renovate queueu.
+		ignoreUnstable: true, // TODO revert to false, temp until I clear Renovate queue.
 	},
 	customManagers: [
 		{
