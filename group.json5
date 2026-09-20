@@ -270,6 +270,7 @@
 					"com.android.internal.reporting",
 					"com.android.internal.test",
 					"com.android.internal.version-check",
+					"com.android.legacy-kapt",
 					"com.android.library",
 					"com.android.lint",
 					"com.android.reporting",
