@@ -121,6 +121,27 @@
 				"Release notes: https://developer.android.com/studio/preview/compose-screenshot-testing#release-updates",
 			],
 		},
+		{
+			// Renovate skips Maven Central for artifacts ending in ".gradle.plugin",
+			// even when their markers are published there and Gradle resolves them.
+			// Change: https://github.com/renovatebot/renovate/pull/43346
+			// Documented limitation: https://docs.renovatebot.com/modules/datasource/maven/#description
+			// Regression report: https://github.com/renovatebot/renovate/discussions/46534
+			// Remove this workaround once direct Central lookups are restored.
+			description: "Work around Maven Central being skipped for Gradle plugin markers",
+			matchDatasources: ["maven"],
+			matchPackageNames: ["*.gradle.plugin"],
+			// Override repositories extracted from Gradle, keeping build config unchanged.
+			// https://docs.renovatebot.com/configuration-options/#registryurls
+			registryUrls: [
+				// Preserve lookup support for Android plugin markers hosted by Google.
+				"https://dl.google.com/android/maven2/",
+				// The Portal redirects artifacts it cannot serve to Maven Central
+				// (historically JCenter), including Central-only net.twisterrob plugins.
+				// https://blog.gradle.org/portal-jcenter-impact
+				"https://plugins.gradle.org/m2/",
+			],
+		},
 	],
 	"gradle-wrapper": {
 		description: "Update Gradle wrapper to non-stable versions",
